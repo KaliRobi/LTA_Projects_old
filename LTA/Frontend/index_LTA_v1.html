@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Idea</title>
+    <style>
+        .body{
+            background: rgb(189, 163, 163);
+
+        }
+         .wrapper > div { 
+        background:  rgb(189, 163, 163);
+        padding: 1em;
+        
+
+        }
+       /* .wrapper > div:nth-child(odd){
+        background: #ddd;
+        }*/
+
+        .wrapper{
+            display: grid;
+            /*grid-template-columns: 1fr 2fr 1fr;
+            */
+            grid-template-columns:repeat(6, 1fr );
+            grid-gap:0,5em;
+            /*grid-auto-rows: 100px; */
+            grid-auto-rows:(100PX, auto);
+        }
+        .header{
+            grid-column: 1/7;
+
+        }
+        
+        .attribs {
+
+            border: 1px solid #bdabab;
+
+        }
+        .sidebar{
+            grid-row: 1/15;
+            grid-column: 6/7;
+        }
+        .verify {
+            font-size: 13px;
+            border: black solid 1px;
+           
+        }
+        .verifHeader {
+            border: black solid 1px;
+            background-color: burlywood;
+            
+
+        }
+        .verilist {
+            border: black solid 1px;
+            background-color: burlywood;
+            
+
+        }
+
+    </style>
+
+
+
+</head>
+<body class="body">
+    <div class="wrapper" id="wrapper">
+
+        <div class = "attribs" >
+            <form>
+                <label for="Volume"  >Volume</label>
+                <br>
+                <input type="text" Id = "Volume" class = "attribsInput" required >            
+                <label for="Name (with aliases)">Name (with aliases)</label>
+                <input type="text" Id = "Name"  class = "attribsInput" required >            
+                <label for="Sex">Sex</label>
+                <br>
+                <input type="text" Id = "Sex" class = "attribsInput" required >            
+                <label for="Height">Height(cm)</label>
+                <br>
+                <input type="text" Id = "Height" required >            
+                <label for="Build">Build</label>
+                <br>
+                <input type="text" Id = "Build" required >            
+                <label for="Dentition">Dentition</label>
+                <br>
+                <input type="text" Id = "Dentition" required >            
+                <label for="Special_Peculiarities">Special Peculiarities</label>
+                <br>
+                <input type="text" Id = "Special_Peculiarities" required >            
+                <label for="Date_of_Birth">Date of Birth</label>
+                <br>
+                <input type="text" Id = "Date_of_Birth" required >            
+                <label for="Place_of_Birth">Place of Birth</label>
+                <br>
+                <input type="text" Id = "Place_of_Birth"  required >            
+                <label for="Place_of_Residence">Place of Residence</label>
+                <br>
+                <input type="text" Id = "Place_of_Residence" required >            
+                <label for="Adress">Adress</label>
+                <br>
+                <input type="text" Id = "Adress" required >            
+                <label for="Religion">Religion</label>
+                <br>
+                <input type="text" Id = "Religion" required >            
+                <label for="Legitimate/Illegitimate_Child">Legitimate/Illegitimate Child</label>
+                <br>
+                <input type="text" Id = "Childhood" required >            
+                <label for="Marital_Status">Marital Status</label>
+                <br>
+                <input type="text" Id = "Marital_Status" required >            
+                <label for="Number_of_Children">Number of Children</label>
+                <br>
+                <input type="text" Id = "Number_of_Children" required >            
+                <label for="Occupation">Occupation</label>
+                <br>
+                <input type="text" Id = "Occupation" required >            
+                <label for="Occupation(2)">Occupation (2)</label>
+                <br>
+                <input type="text" Id = "Occupation(2)" required >            
+                <label for="occupation(3)">Occupation(3)</label>
+                <br>
+                <input type="text" Id = "Occupation(3)" required >            
+                <label for="Military_Service">Military Service</label>
+                <br>
+                <input type="text" Id = "Military_Service" required >           
+                <label for="Literacy">Literacy</label>
+                <br>
+                <input type="text" Id = "Literacy" required >            
+                <label for="Education">Education</label>
+                <br>
+                <input type="text" Id = "Education"> required             
+                <label for="Criminal_History">Criminal History</label>
+                <br>
+                <input type="text" Id = "Criminal_History" required >            
+                <label for="Crime">Crime</label>
+                <br>
+                <input type="text" Id = "Crime" required >            
+                <label for="Sentence_Begins">Sentence Begins</label>
+                <br>
+                <input type="text" Id = "Sentence_Begins" required >            
+                <label for="Sentence_Expires">Sentence Expires</label>
+                <br>
+                <input type="text" Id = "Sentence_Expires" required >            
+                <label for="Prison_Term(day)">Prison Term (day)</label>
+                <br>
+                <input type="text" Id = "Prison_Term" required >            
+                <label for="Ransome(Pengő,Fillér)">Ransome (Pengő,Fillér)</label>
+                <br>
+                <input type="text" Id = "Ransome" required >            
+                <label for="Associate(s)">Associate(s)</label>
+                <br>
+                <input type="text" Id = "Associate" required >            
+                <label for="Degree_of_the_Crime">Degree of the Crime</label>
+                <br>
+                <input type="text" Id = "Degree_Crime" required >            
+                <label for="Degree_of_the_Punishment">Degree of the Punishment</label>
+                <br>
+                <input type="text" Id = "Degree_Punishment" required >            
+                <label for="Notes">Notes</label>
+                <br>
+                <input type="text" Id = "Notes" required >            
+                <label for="Arrest_Site">Arrest Site</label>
+                <br>
+                <input type="text" Id = "Arrest_Site" required >            
+            </form>    
+        </div><div class = "attribs" >
+            <form>
+                       
+            </form>    
+        </div><div class = "attribs" >
+            <form>
+                            
+            </form>    
+        </div>
+        <div class = "button" >
+            <form>
+                <label for="Volume"></label>
+                <button id="submitData">Upload</button> 
+                <button id="dropIt">drop data</button>         
+                      
+            </form>    
+        </div>       
+
+    </div>
+
+    <div id="verify" class="verify">
+        <div> 
+            <table>
+                <thead>
+                    <tr class = "verifHeader">
+                        <th>Volume</th>
+                        <th>Name</th>
+                        <th>Sex</th>
+                        <th>Height(cm)</th>
+                        <th>Build</th>
+                        <th>Dentention</th>
+                        <th>Special Peculiarities</th>
+                        <th>Date of Birth</th>
+                        <th>Place of Birth</th>
+                        <th>Place of Residence</th>
+                        <th>Address</th>
+                        <th>Religion</th>
+                        <th>Legitimate/Illegitimate Child</th>
+                        <th>Marital Status</th>
+                        <th>Number of Children</th>
+                        <th>Occupation</th>
+                        <th>Occupation (2)</th>
+                        <th>Occupation (3)</th>
+                        <th>Military Service</th>
+                        <th>Literacy</th>
+                        <th>Education</th>
+                        <th>Criminal History</th>
+                        <th>Degree of the Crime</th>
+                        <th>Degree of the Punishment</th>
+                        <th>Notes</th>
+                        <th>Arrest Site</th>
+                    </tr>
+                </thead>
+               
+            </table>
+            
+        </div>
+    </div>
+    <br>
+    <div class="verify">
+        <tbody>
+            <div id="rowList"></div>
+        </tbody>
+    </div>
+    
+    
+
+<script src="main.js"></script>
+    
+    
+</body>
+</html>

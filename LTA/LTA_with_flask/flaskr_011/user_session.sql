@@ -1,0 +1,1 @@
+SELECT * from lta_users WHERE username = %s;

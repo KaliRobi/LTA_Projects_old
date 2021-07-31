@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Idea</title>
+    <style>
+           .body{
+            background: rgb(189, 163, 163);
+
+        }
+         .wrapper > div { 
+        background:  rgb(189, 163, 163);
+        padding: 1em;
+        
+
+        }
+       /* .wrapper > div:nth-child(odd){
+        background: #ddd;
+        }*/
+
+        .wrapper{
+            display: grid;
+            /*grid-template-columns: 1fr 2fr 1fr;
+            */
+            grid-template-columns:repeat(6, 1fr );
+            grid-gap:0,5em;
+            /*grid-auto-rows: 100px; */
+            grid-auto-rows:(100PX, auto);
+        }
+        .header{
+            grid-column: 1/7;
+
+        }
+        
+        .attribs {
+
+            border: 1px solid #bdabab;
+
+        }
+        .sidebar{
+            grid-row: 1/15;
+            grid-column: 6/7;
+        }
+        .verify {
+            font-size: 13px;
+            border: black solid 1px;
+           
+        }
+        .verifHeader {
+            border: black solid 1px;
+            background-color: burlywood;
+            
+
+        }
+        .verilist {
+            border: black solid 1px;
+            background-color: burlywood;
+            
+
+        }
+     
+
+    </style>
+
+
+
+</head>
+<body class="body">
+    <div class="wrapper" id="wrapper">
+        <div class = "attribs" >
+            <form action="/post_data" method="post">
+                <div>
+                <label for="Volume"  >Volume</label>
+                <br>
+                <input type="text" Id = "volume" class = "attribsInput" name="volume" required >            
+                <label for="Name"> Name </label>
+                <br>
+                <input type="text" Id = "name"  class = "attribsInput" name="name" required >            
+                <label for="Sex">Sex</label>
+                <br>
+                <input type="text" Id = "sex" class = "attribsInput" name="sex" required >            
+                <label for="Height">Height(cm)</label>
+                <br>
+                <input type="text" Id = "height" name="height" required >            
+                <label for="Build">Build</label>
+                <br>
+                <input type="text" Id = "build" name="build" required >
+                <label for="Dentition">Dentition</label>
+                <br>
+                <input type="text" Id = "Dentition" name="dentition" required >            
+                <label for="Special_Peculiarities">Special Peculiarities</label>
+                <br>
+                <input type="text" Id = "Special_Peculiarities"  name="special_peculiarities" required >            
+                <label for="Date_of_Birth">Date of Birth</label>
+                <br>
+                <input type="text" Id = "Date_of_Birth" name="date_of_birth" required >            
+                <label for="Place_of_Birth">Place of Birth</label>
+                <br>
+                <input type="text" Id = "Place_of_Birth" name="place_of_birth"  required >            
+                <label for="Place_of_Residence">Place of Residence</label>
+                <br>
+                <input type="text" Id = "Place_of_Residence" name="place_of_residence" required >            
+                <label for="Adress">Adress</label>
+                <br>
+                <input type="text" Id = "residence" name="residence" required >            
+                <label for="Religion">Religion</label>
+                <br>
+                <input type="text" Id = "Religion" name="religion" required >            
+                <label for="Legitimate/Illegitimate_Child">Legitimate/Illegitimate Child</label>
+                <br>
+                <input type="text" Id = "Childhood" name="childhood_status" required >            
+                <label for="Marital_Status">Marital Status</label>
+                <br>
+                <input type="text" Id = "Marital_Status" name="marital_status" required >            
+                <label for="Number_of_Children">Number of Children</label>
+                <br>
+                <input type="text" Id = "Number_of_Children" name="number_of_children" required >            
+                <label for="Occupation">Occupation</label>
+                <br>
+                <input type="text" Id = "Occupation" name="occupation" required >            
+                <label for="Occupation(2)">Occupation (2)</label>
+                <br>
+                <input type="text" Id = "Occupation(2)" name="occupation_2" required >            
+                <label for="occupation(3)">Occupation(3)</label>
+                <br>
+                <input type="text" Id = "Occupation(3)" name="occupation_3" required >            
+                <label for="Military_Service">Military Service</label>
+                <br>
+                <input type="text" Id = "Military_Service" name="military_service" required >           
+                <label for="Literacy">Literacy</label>
+                <br>
+                <input type="text" Id = "Literacy" name="literacy" required >            
+                <label for="Education">Education</label>
+                <br>
+                <input type="text" Id = "Education" name="education" required >            
+                <label for="Criminal_History">Criminal History</label>
+                <br>
+                <input type="text" Id = "Criminal_History" name="criminal_history" required >            
+                <label for="Crime">Crime</label>
+                <br>
+                <input type="text" Id = "Crime" name="crime" required >            
+                <label for="Sentence_Begins">Sentence Begins</label>
+                <br>
+                <input type="text" Id = "Sentence_Begins" name="sentence_begins" required >            
+                <label for="Sentence_Expires">Sentence Expires</label>
+                <br>
+                <input type="text" Id = "Sentence_Expires" name="sentence_expires" required >            
+                <label for="Prison_Term(day)">Prison Term (day)</label>
+                <br>
+                <input type="text" Id = "Prison_Term" name="prison_term" required >            
+                <label for="Ransome(Pengő,Fillér)">Ransome</label>
+                <br>
+                <input type="text" Id = "Ransome" name="ransome" required >    
+                <label for="Associates">Associates</label>
+                <br>
+                <input type="text" Id = "Associates" name="associates" required >         
+                <label for="Degree_of_the_Crime">Degree of the Crime</label>
+                <br>
+                <input type="text" Id = "Degree_Crime" name="degree_crime" required >            
+                <label for="Degree_Punishment">Degree of the Punishment</label>
+                <br>
+                <input type="text" Id = "Degree_Punishment" name="degree_punishment" required >            
+                <label for="Notes">Notes</label>
+                <br>
+                <input type="text" Id = "Notes" name="notes" required >            
+                <label for="Arrest_Site">Arrest Site</label>
+                <br>
+                <input type="text" Id = "Arrest_Site" name="arrest_site" required > 
+                <br>            
+                <button id="submitData">Upload</button> 
+                            
+            </form>    
+        </div>       
+
+    </div>
+
+
+    <div class="verify">
+        <tbody>
+            <div id="rowList"></div>
+        </tbody>
+    </div>
+    
+    
+
+
+    
+    
+</body>
+</html>

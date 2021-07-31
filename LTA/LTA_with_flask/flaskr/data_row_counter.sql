@@ -1,0 +1,1 @@
+Select count(username) from test_lta_main;

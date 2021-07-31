@@ -1,0 +1,1543 @@
+ls
+cd ..
+ls
+export FLASK_Env=developement
+export FLASK_APP=flaskr
+flask run
+ls
+cd flaskr/
+ls
+code lta_database.py
+flask run
+cd ..
+flask run
+flask run --host=127.0.0.1:5503
+flask run 
+cd flaskr/
+cd templates/
+ls
+cd ..
+ls
+cd ..
+flask run 
+export FLASK_ENV=development
+flask run 
+ls
+export FLASK_APP=flaskr
+export FLASK_ENV=Development
+flask run
+python3
+source /home/robi/anaconda3/bin/activate
+fkconda activate base
+ls
+export FLASK_APP=flaskr/
+export FLASK_ENV=Development
+run flask
+flask run
+freeze
+pip freeze
+pip intsall psycopg2
+pip3  psycopg2
+apt-get install psycopg2
+sudo apt-get install psycopg2
+cd ..
+cd flask-tutorial/
+ls
+export FLASK_APP=flaskr
+export FLASK_ENV=Development
+flask run
+ls
+cd flaskr/templates/
+ls
+mkdir auth
+mv login.html register.html auth/
+ls
+code base
+code base.html 
+cd ../..
+code flask
+ls
+cd flaskr
+ls
+cd templates/
+ls
+code base.html 
+cd auth/
+cd ..
+cd blog/
+ls
+code create.htm 
+code index.html 
+cd t
+ls
+cd flaskr/
+cd templates/
+code auth/
+
+code auth/login.html 
+ls
+cs ../..
+cd ../..
+ls
+cd instance/
+sqlite3 flask.sqlite 
+ls
+cd ..
+source /home/robi/anaconda3/bin/activate
+conda activate base
+conda deactivate base
+conda /?
+conda --help
+source deactivate
+clear
+export FLASK_APP=flaskr
+export FLASK_ENV=Development
+flask run
+pip install psycopg2
+flask run
+cd  flaskr/templates/
+mkdir pagemain
+mv index.html pagemain/
+cd ../..
+flask run
+cd flaskr/
+ls
+cd templates/
+cd pagemain/
+mv index.html ../
+cd ..
+rem pagemain/
+rm pagemain/
+rm pagemain/ -r
+ls
+code index.html 
+cd ..
+cd static/
+code style.css
+cd ../..
+flask run
+export FLASK_APP=flaskr
+export FLASK_ENV=Development
+flask run
+export FLASK_ENV=Development
+flask run
+nano
+flask run
+nano file.txt
+flask run
+ls
+cd  flaskr/
+cd templates/
+code index.html 
+cd ../..
+flask run
+
+flask run
+export FLAKS_APP=flaskr
+export FLASK_ENV=Development
+flask run
+export FLASK_ENV=development
+flask run
+cd ../..
+cd flask/flask-tutorial/
+cd flaskr/
+ls
+cd tem
+cd ..
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+cd ../..
+cd LTA/
+ls
+cd flask-template/
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source deactivate
+ls
+cd flaskr/templates/
+code forusers.html
+cd ,,
+cd ..
+cd static/
+code style.css 
+ls
+cd ../templates/
+ls
+cd ..
+ls
+ltausers.py
+code ltausers.py
+ls
+cd  templates/
+cp index.html map.html
+code map.html 
+code analytics.html
+code index.html 
+cd ..
+ls
+code ltausers.py 
+cd templates/
+ls
+code forusers.html 
+cd ..
+cd static/
+code style.css 
+cd ../templates/
+l
+code analytics.html index.html map.html 
+cd ../..
+cd ..
+cd flask/
+ls
+cd templates/
+ls
+cd ../venv/
+ls
+cd ../flask-tutorial/
+ls
+cd flaskr/
+ls
+cd templates/
+ls
+cd blog/
+ls
+cd ..
+cd ../..
+cd ..
+cd LTA
+ls
+cd backend/
+ls
+cd ,,/Ft
+cd ,,/Fr
+cd ,,
+cd ../Frontend/
+ls
+cd templates/
+ls
+cp script.js  /var/www/flask/flask-tutorial/flaskr/templates/
+cd ..
+cd ../..
+cd flask/
+cd flask-tutorial/
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+cd ../..
+cd LTA/flask-template//flaskr/templates/
+ls
+cd ../static/
+ls
+cd ,,
+cd ..
+ls
+cp /var/www/flask/flask-tutorial/flaskr/templates/script.js ./static/
+cd static/
+ls
+cd ../templates/
+code forusers.html 
+cd ..
+ls
+cd ..
+ls
+cd  instance/
+ls
+cd ..
+git status
+git pull
+clear
+git status
+git add 
+git add .
+git status
+cd LTA-database/
+git add .
+ls
+cd ..
+git pull LTA-database/
+git status
+cd LTA-database/
+ls
+cd ..
+ls
+cd LTA-database/
+ls
+git pull .
+ls
+git status
+ls
+cd ..
+git remote remove origin git@github.com:KaliRobi/LTA-database.git
+git remote remove  git@github.com:KaliRobi/LTA-database.git
+git remote remove  git@github.com:KaliRobi
+git remote remove  https://github.com/KaliRobi/
+git remote remove  https://github.com/KaliRobi/*
+git remote remove https://github.com/KaliRobi/LTA-database.git
+git --help
+cd LTA-database/
+git fetch .
+ls
+git commit
+git commit -m commit
+ls
+git status 
+git pull .
+code test.py
+git status 
+git push 
+git status 
+git pull .
+git fetch .
+git commit
+git push test.py
+git push 
+cd ..
+rm -r LTA-database/
+ls
+git remote add origin https://github.com/KaliRobi/LTA-database.git
+git push
+git push --set-upstream origin master
+ls
+cd LTA-database/
+ls
+git status
+cd ..
+git status
+git init
+ls
+cd LTA-database/
+ls
+git status
+cd ..
+cd /var/www/LTA/
+ls
+cd Lta\ with\ flask/
+cd ..
+mv Lta\ with\ flask/ LTA_with_flask
+cd LTA_with_flask/
+ls
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+flask init-db
+init-db
+flask --help
+flask init-db
+flusk run
+flask run
+flask init-db
+esport FLASK_APP=flaskr
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask init-db
+flask init_db
+flask init-users-db
+cd instance/
+pswl -U postgres
+psql -U postgres
+psql -U robi
+sudo psql -U root
+sudo psql -U robi
+sudo psql -U postgres
+sudo psql -U ltauser2
+psql -U ltauser2
+psql
+psql --help
+sudo su postgres
+ls
+pg_dump lta_user_mas lta_users > lta_users.pgsql
+pg_dump lta_users > lta_users.pgsql
+pg_dump lta_user_mas lta_users  > lta_users.pgsql
+pg_dump --help
+pg_dump lta_user_mas   > lta_users.pgsql
+sudo su postgresql
+sudo su postgres
+sudo su lta_user_mas
+sudo su lta_users_mas
+sudo su postgres 
+cd ..
+ls -a
+ls 
+ls -all
+sudo chmod 777 instance/
+cd ./instance/
+sudo su postgres 
+sudo psql lta_data.pgsql
+psql lta_data.pgsql
+psql -U lta_data_mas lta_data.pgsql
+psql --help
+sudo su lta_data_mas
+psql -h localhost -lta_data_mas lta_data.pgsql
+psql -h localhost -U lta_data_mas lta_data.pgsql
+ls
+psql -U lta_data_mas lta_data.pgsql
+sudo su psotgres
+sudo su postgres
+psql --help
+psql
+sudo su postgres
+sudo su postgres 
+rm lta_*
+psql
+sudo su postgres 
+rm lta_*
+cd ..
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+flask init-users-db
+sudo su postgres
+flask init-users-db
+sudo su postgres
+flask init-users-db
+sudo su postgres
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source deactivate
+sudo su postgres
+cd ../..
+cd ..
+ls
+cd PythonCourse/
+ls
+code openAndRead.py 
+code fileIO.py 
+sudo su postgres 
+source /home/robi/anaconda3/bin/activate
+conda activate base
+surce dectivate
+source dectivate
+source deactivate
+cd  .. 
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+cd /var/www/LTA
+ls
+cd backend/
+ls
+less fullsite.py 
+grep lta
+sudo su postgres
+less /etc/passwd
+pyton3
+python3
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+cd flaskr/
+cd templates/
+code input.html 
+code index.html 
+cd ../..
+flask run
+cd flakr
+cd flaskr
+code db_queries.py
+code row_counter.sql
+cd ..
+flask run
+code insert_input.sql
+mv insert_input.sql flaskr/
+flask run
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source deactivate
+ls
+cd /faskr/st
+cd flaskr/static/
+code style.css 
+cd ..
+code input.py
+flask init-dt-db
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+export FLASK_ENV=develop
+flask run
+export FLASK_ENV=development
+flask run
+source /home/robi/anaconda3/bin/activate
+conda activate base
+flusk init-dt-db
+source deactivate
+flusk init-dt-db
+flask init-dt-db
+flask --help
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask init-dt-db
+python -c 'import os; print(os.urandom(16))'
+python -c 'import os; print(os.urandom(32))'
+python -c 'import os; print(os.urandom(24))'
+python -c 'import os; print(os.urandom(8))'
+python -c 'import os; print(os.urandom(32))'
+python -c 'import os; print(os.urandom(8))'
+source /home/robi/anaconda3/bin/activate
+
+
+source deactivate
+sudo su postgres 
+pandas --version
+sudo pip3 install pandas
+python3
+which pandas
+pip3 install pandas
+sudo pip3 install pandas
+python3 freeze 
+freeze 
+python3
+pip freeze
+pip freeze | grep pandas
+suod su postgres
+sudo su postgres
+clear
+conda 
+jupyter
+jupyter notebook
+conda
+conda run anaconda3/envs/
+conda run anaconda3/envs/jupyter
+anaconda-navigator
+anaconda3/
+anaconda3
+anacron 
+conda init
+source ~/bashrc
+source ~/.bashrc
+conda init
+conda init anaconda3/
+conda init anaconda3/bash
+conda init bash
+python
+sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+bash ~/Downloads/Anaconda3-2020.02-Linux-x86_64.sh
+bash ~/Downloads/Anaconda3-2020.11-Linux-x86_64
+bash ~/Downloads/Anaconda3-2020.11-Linux-x86_64.sh
+source anaconda3/bin/activate 
+conda init
+anaconda-navigator 
+ls
+export FLASK_APP=chat
+flask run
+export FLASK_ENV=development
+flask run
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source deactivate
+sudo su postgres 
+cd flaskr/templates/
+cp input.html input.backup.html
+c ../..
+cd ../..
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source deactivate
+cd flaskr/templates/
+cp input.html input.beauty.html
+cd ..
+ls
+python3 db_queries.py
+cd  templates
+code myrecords.html
+cd ../..
+ls
+export FLASK_APP=instance
+flask run
+pip install apscheduler
+cd flaskr/
+code data_row_counter.sql
+conda init
+source anaconda3/bin/activate 
+anaconda-navigator 
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source deactivate
+sudo su postgres
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+nano
+cd /var/www/PythonCourse/
+python doubleloop.py 
+ls
+ls | comp
+ls | grep comp
+ls | grep 
+ls | grep com
+code compr.py 
+code diccompreh.py 
+code dicom.py 
+ls | grep lis
+code for2lop.py 
+code forlo.py 
+python doubleloop.py 
+ls 
+code doubleloop.py 
+code grumpzdict.py 
+code iterations.py 
+code keyvalueconditions.py 
+code lonstr.py 
+code params.py 
+code touple.py 
+python doubleloop.py 
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source deactivate
+sudo su postgres 
+source /home/robi/anaconda3/bin/activate
+conda activate base
+import numpy
+clear
+source deactivate
+cd flaskr/templates/
+cp myrecords.html myrecords.horizontal.backup.html
+cd ../..
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+python3
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source deactivate
+sudo su postgresql
+sudo su postgres
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source deactivate
+cd flaskr/templates/
+cp myrecords.html edit.html
+code edit.html 
+cp edit.html  edit.backup.html
+cp myrecords.html myrecords.backup.html
+export FLASK_ENV=development
+export FLASK_APP=flaskr
+flask run
+export FLASK_APP=flaskr
+export FLASK_APP=development
+flask run
+export FLASK_ENV=development
+flask run
+clear
+export FLASK_APP=flaskr
+flask run
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source deactivate
+cd flaskr/
+cp input.py input.backup.py
+export FLASK_APP=flakr
+export FLASK_ENV=development
+flak run
+flask run
+export FLASK_APP=flaskr
+flask run
+flask shell
+which python3
+flask shell
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+flask shell
+which flask
+flask --version
+flask run
+pip3 install apscheduler
+flask run
+which psycopg2
+psycopg2 --ver
+pip2 install psycopg2
+which psycopg2
+pip3 install psycopg2
+which psycopg2
+psycopg2 --ver
+python3 freeze
+python3
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+python -m venv lta_env
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source deactivate
+python3 --version
+python --version
+flask shell
+vimm /home/myuser/.local/bin/flask
+vim /home/myuser/.local/bin/flask
+vim /home/robi/.local/bin/flask 
+sudo vim /home/robi/.local/bin/flask 
+python3 -m venv lta_venv
+source env/bin/activate
+ls
+source env/bin/activate
+source 
+python3 -m venv lta_venv
+source env/bin/activate
+source /env/bin/activate
+
+source lta_venv/bin/activate
+pip freeze
+python3 --ver
+python3
+pip3 install psycopg2
+pip install Flask
+pip install apscheduler
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+cd  flaskr flaskr_p3
+cp  flaskr flaskr_p3
+cp  -r  flaskr flaskr_p3
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source deactivate
+ls
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+flask shell
+clear
+flask run
+flask shell
+cd flaskr_p3/
+ls
+cd ..
+python3 -m venv lta_Python3_env
+source lta_Python3_env/bin/activate
+export FLASK_ENV=developmenr
+export FLASK_APP=flaskr_p3
+flask run
+python3 --version
+flask --version
+flask shell
+deactivae
+deactivate
+source lta_venv/bin/activate
+flask --version
+deactivae
+deactivate
+source lta_Python3_env/bin/activate
+Flask --version
+flask --version
+pip3 install apscheduler
+sudo apt install python3-dev libpq-dev
+pip3 install psycopg2
+export FLASK_APP=flaskr_p3
+export FLASK_APP=development
+flask run
+export FLASK_APP=flaskr_p3
+export FLASK_ENV=development
+flask run
+sudo su postgres
+flask run
+clear
+flask run
+flask --version
+flask run
+flask shell
+flask run
+source /home/robi/anaconda3/bin/activate
+conda activate base
+source deaactivate
+source deactivate
+sudo su psotgres
+sudo su postgres
+pip freeze
+pip3 freeze
+cd ~
+cd ./env
+source venv/bin/activate
+source deactivate
+cd ..
+deactivate 
+whereis lta_venv
+cd..
+cd ..
+whereis lta_venv
+ls
+source /var/www/LTA/LTA_with_flask/lta_venv/bin/activate
+source deactivate
+source /var/www/LTA/LTA_with_flask/lta_venv/bin/activate
+source /var/www/LTA/LTA_with_flask/lta_venv/bin/activate
+ping 192.168.0.115
+deactivate
+python3
+source deactivate
+deactivate
+sudo su postgres
+source lta_Python3_env/bin/activate
+FLASK_APP=flaskr_p3
+export FLASK_APP=flaskr_p3
+export FLASK_ENV=development
+flask run
+ping 192.168.0.172
+ssh 192.168.0.172
+ssh üi pi 192.168.0.172
+ssh -i pi 192.168.0.172
+sudo su pi
+ssh --help
+ssh pi@196.168.0.172
+ssh -J pi@196.168.0.172
+ssh pi@196.168.0.172
+ssh pi@192.168.0.172
+sudo su postgres
+source lta_Python3_env/bin/activate
+export FLASK_APP=flask_p3
+export FLASK_ENV=development
+flask run
+export FLASK_APP=flaskr_p3
+flask run
+nano 
+source /var/www/LTA/LTA_with_flask/lta_venv/bin/activate
+source /var/www/LTA/LTA_with_flask/lta_venv/bin/activate
+python3
+ls
+source anaconda3/bin/activate 
+anaconda-navigator 
+source anaconda3/bin/activate 
+anaconda-navigator 
+cd books/Untitled\ Folder/03-Pandas/
+pwd
+ls
+source anaconda3/bin/activate 
+cd books/Untitled\ Folder/03-Pandas/
+anaconda-navigator 
+source lta_Python3_env/bin/activate
+pip3 install FLASK-WTF
+pip install WTForms
+source lta_Python3_env/bin/activate
+pip3 install WTForms
+deactivate 
+cd ..
+mkdir wtform
+cd LTA
+ls
+cd ..
+ls
+sudo mkdir wtforms
+sudo chmod 777 wtforms/
+cd wtf
+cd wtforms/
+mkdir wftapp
+cd wftapp/
+code app.py
+cd ..
+cd ../LTA
+ls
+cd Frontend/
+ls
+cd env/
+ls
+cd ..
+ls
+cd ..
+ls
+cd backend/
+ls
+code lta_transfer_posgress.py 
+python3
+pip install WTForms
+python3
+pip3 install WTForms
+python3
+cd /var/www/LTA/backend/
+sqlite3 LTA_NEW.db 
+cd /var/www/
+ls
+cd /jobhunter
+cd jobhunter
+ls
+sqlite3 jobhunter.db 
+cd ..
+cd LTA
+ls
+cd backend/
+ls
+sqlite3 test_lta.db 
+sqlite3 LTA_NEW.db 
+source lta_Python3_env/bin/activate
+cd flaskr
+cp input.py input.backup.py
+pip3 install wtforms
+cd ..
+ls
+cd flaskr_p3
+cp input.py input.backup.py
+cd ..
+cd temlates
+ls
+cd flaskr_p3/
+ls
+cd templates/
+cd ..
+cd home/robi/books/Untitled\\ Folder/03-Pandas/
+cd home/robi/books/Untitled\ Folder/03-Pandas/
+cd /home/robi/books/Untitled\ Folder/03-Pandas/
+cd ~
+cd /home/robi/books/Untitled Folder/03-Pandas/tips.cs
+cd /home/robi/books/Untitled Folder/03-Pandas/
+cd /home/robi/books/Untitled\ Folder/03-Pandas/
+cd ..
+mv Untitled\ Folder/  mldata
+source anaconda3/bin/activate 
+anaconda-navigator 
+cd books/mldata/03-Pandas/
+cd ../..
+cd ..
+ls
+source anaconda3/bin/activate 
+anaconda-navigator 
+source anaconda3//bin/activate 
+anaconda-navigator 
+source anaconda3/bin/activate 
+anaconda-navigator 
+cd ..
+ls
+cd  backend/
+ls
+code postgresql.py 
+code lta_transfer_posgress.py 
+cd ..
+ls
+cd LTA_with_flask/
+l
+source lta_Python3_env/bin/activate
+export FLASK_APP=flaskr_p3
+export FLASK_ENV=development
+flask --help
+flask init-dt-db
+flask run
+flask init-dt-db
+flask run
+deactivate 
+ls
+cd ..
+ls
+cd Frontend/
+ls
+cd env
+ls
+cd ../..
+ls
+cd backend/
+ls
+code lta_transfer_posgress.py 
+code lta.csv 
+code lta_to_postgreSQL.py
+cd ..
+ls
+cd PythonCourse/
+ls
+code openAndRead.py 
+whereis read
+ls | grep 'read'
+ls | grep '*read*'
+code csvoperations.py 
+code fileIO.py 
+cd ..
+cd LTA
+ls
+cd LTA_with_flask/
+ls
+cd ..
+cd backend/
+ls
+python3 lta_to_postgreSQL.py 
+[A
+python3 lta_to_postgreSQL.py 
+clear
+python3 lta_to_postgreSQL.py 
+code dates_to_postgresQL.py
+python3 lta_to_postgreSQL.py 
+clear
+python3 lta_to_postgreSQL.py 
+python3 dates_to_postgresQL.py
+clear
+cd ../..
+cd PythonCourse/
+ls
+code regexp.py
+code regexpex.py 
+cd ..
+cd LTA/backend/
+ls
+code fullsite.py 
+cd ..
+cd LTA/backend/
+python2 dates_to_postgresQL.py 
+python3 dates_to_postgresQL.py 
+ls
+mv Letartoztatottak_Torteneti_Adatbazisa_HI-
+mv Letratoztatottak_Torteneti_Adatbazisa_Hi-_2_-_1_.csv lta.csv
+ls
+code lta.csv 
+python3 lta_to_postgreSQL.py 
+clear
+python3 dates_to_postgresQL.py 
+cd ..
+ls
+cd LTA_with_flask/
+export FLASK_APP=flaskr_p3
+export FLASK_ENV=development
+flask run
+source lta_Python3_env/bin/ac
+source lta_Python3_env/bin/activate
+export FLASK_APP=flaskr_p3
+export FLASK_ENV=development
+flask run
+deac
+deactivate 
+cd ../backend/
+python3 dates_to_postgresQL.py 
+mv  dates_to_postgresQL.py clear_cv.py
+source /var/www/LTA/LTA_with_flask/lta_venv/bin/activate
+deactivate
+sudo su postgres 
+cd  /var/www/LTA/LTA_with_flask/
+source lta_Python3_env/bin/activate
+sudo su postgres 
+cd ../backend/
+ls
+code lta_to_postgreSQL.py 
+code dates_to_postgresQL.py 
+python3  dates_to_postgresQL.py 
+clear
+python3  dates_to_postgresQL.py 
+clear
+code lta.csv 
+python3  dates_to_postgresQL.py 
+clear
+python3  dates_to_postgresQL.py 
+cs /var/www/LTA
+ls
+cd /var/www/LTA
+ls
+cd backend/
+ls
+sqlite3 LTA_NEW.db 
+cd ../backend/
+python3  dates_to_postgresQL.py 
+clear
+python3  dates_to_postgresQL.py 
+clear
+python3  dates_to_postgresQL.py 
+clear
+cd ../LTA_with_flask/
+ls
+source lta_Python3_env/bin/activate
+deactivate 
+export FLASK_ENV=development
+export FLASK_APP=flaskr
+source lta_Python3_env/bin/activate
+export FLASK_APP=flaskr_p3
+export FLASK_ENV=development
+flask run
+cd ../backend/
+python3  dates_to_postgresQL.py 
+deactivate 
+python3  dates_to_postgresQL.py 
+code frist_50.py
+cd ../..
+cd ~
+source anaconda3/bin/activate 
+anaconda-navigator 
+sudo pip install python-matplotlib 
+python -m pip install -U matplotlib
+ls
+cd ../backend/
+ls
+code frist_50.py 
+pip install numpy
+python3 frist_50.py 
+python -m pip3 install -U matplotlib
+python3 -m pip3 install -U matplotlib
+python3 -m pip install -U matplotlib
+python3 frist_50.py 
+code title_test.py
+python3 title_test.py
+cd ../LTA_with_flask/
+cd ~
+source anaconda3/bin/activate 
+anaconda-navigator 
+deactivate 
+conda deac
+deactivate
+conda deactivate
+cd /var/www/LTA/backend/
+code title_test.py
+python3 frist_50.py 
+cd ../backend/
+python3 frist_50.py 
+python3
+pip install seaborn
+python3
+pip3 install seaborn
+python3
+cd ../backend/
+python3 frist_50.py 
+ls
+eloszlas.png
+code eloszlas.png
+python3 frist_50.py 
+cd ../backend/
+python3 frist_50.py 
+ls
+vim vimgyak.txt 
+vim vimgyak.txt
+cd ../backend/
+ls
+code dates_to_postgresQL.py 
+python3 dates_to_postgresQL.py 
+cd ..
+ls
+cd LTA_with_flask/
+source lta_Python3_env/bin/activate
+python3 dates_to_postgresQL.py 
+ls
+cd ..
+ls
+cd backend/
+python3 dates_to_postgresQL.py 
+ls
+code lta.csv 
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+source /var/www/LTA/LTA_with_flask/lta_venv/bin/activate
+deactivate 
+sudo su postgres 
+source /var/www/LTA/LTA_with_flask/lta_venv/bin/activate
+deactivate 
+cd ..
+cd LTA_with_flask/
+ls
+cd ..
+ls
+cd ..
+cd PythonCourse/
+ls
+ls | grep 'reg'
+code regexp.py 
+code regexpex.py 
+source /var/www/LTA/LTA_with_flask/lta_venv/bin/activate
+sudo su postgres
+cd ../backend/
+cd ../LTA_with_flask/
+source lta_Python3_env/bin/activate
+cd ../backend/
+code dates_to_postgresQL.py 
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+clear
+python3 dates_to_postgresQL.py 
+cp lta.csv lta_backup.csv
+python3 dates_to_postgresQL.py 
+cp lta.csv lta_backup.csv
+python3 dates_to_postgresQL.py 
+python3
+sudo su postgres 
+sudo pg_dump lta_data > lta_dt.sql
+sudo su teszt_user  pg_dump lta_data > lta_dt.sql
+psql 
+sudo su teszt_user
+sudo su postgres 
+cd /var/www/LTA/backend/
+sudo pd_dump -Fc -h localhost -U teszt_user lta_data -f tesztdb.db
+sudo pg_dump -Fc -h localhost -U teszt_user lta_data -f tesztdb.db
+pg_dump --help
+sudo pg_dump -Fc -h localhost -U teszt_user lta_data -f tesztdb.db
+ls
+ls | grep 'teszt'
+cp tesztdb.db /~
+sudo cp tesztdb.db /~
+cd ~
+ls | grep 'teszt'
+cd /var/www/LTA/backend/
+ls | grep 'teszt'
+cp tesztdb.db /home/robi/
+cd ~
+ls | grep 'teszt'
+pwd
+sudo apt-get update
+sudo apt-cache search pgAdmin4
+sudo apt-cache search pgadmin4
+sudo apt  install  pgadmin4 pgadmin4-apache2
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+sudo apt update 
+sudo apt-cache search pgadmin4
+sudo apt install pgadmin4 pgadmin4-apache2
+sudo apt update
+sudo apt install pgadmin4 pgadmin4-apache2
+sudo apt install pgadmin3 pgadmin3-apache2
+sudo apt install pgadmin3 
+systemctl pgadmin3
+systemctl apache2
+systemctl status pgadmin3
+systemctl status apache2
+sudo ufw allow http
+sudo ufw allow https
+sudo apt-get remove pgadmin3
+sudo apt-get remove pgadmin4
+sudo apt-get remove pgadmin4-apache2
+sudo apt-get install pgadmin4-apache2
+systemctl status pgadmin4
+systemctl status pgAdmin4
+sudo postgres
+sudo su postgres 
+sudo su postgres 
+python3
+source lta_Python3_env/bin/activate
+export FLASK_ENV=flaskr_p3
+export FLASK_ENV=development
+
+flask run
+flask --help
+flask -init-dt-db
+flask init-dt-db
+flask run
+flask init-dt-db
+flask run
+source /var/www/LTA/LTA_with_flask/lta_venv/bin/activate
+deactivate
+source lta_Python3_env/bin/activate
+flask --help
+flask init_dt_db
+flask -init_dt_db
+cd ../backend/
+ls
+dls
+ls
+code dates_to_postgresQL.py 
+mv dates_to_postgresQL.py migration_to_db.py
+code migration_to_db.py 
+flask init_dt_db
+code migration_to_db.py 
+python3  migration_to_db.py 
+ls
+code lta.csv
+python3  migration_to_db.py 
+code lta.csv
+python3  migration_to_db.py 
+sudo su postgres
+curl google.com
+curl google.com -v
+cd /var/www/
+ls
+cd jobhunter/
+sqlite3 jobhunter.db 
+source lta_Python3_env/bin/activate
+mkdir valid_front
+cd valid_front/
+code back.py
+code front.html
+cd ..
+rm -r valid_front/
+cd flaskr_p3/
+ls
+cd templates/
+ls
+cp input.html input.backup09.03.html
+cd ..
+ls
+cp  input.py input.backup0903.py
+cd templates/
+code  input.py 
+code  input.html 
+cd ..
+export FLASK_APP=flaskr_p3
+export FLASK_ENV=development
+flask run
+cd ..
+ls
+cd ..
+ls
+mkdir analysis
+sudo mkdir analysis
+chmod 777 analysis/
+sudo chmod 777 analysis/
+cd analysis/
+code birthmonths.py
+python3 birthmonths.py
+seaborn --verision
+pip3 install seaborn
+python3 birthmonths.py
+sudo su postgres 
+cd /AWS
+cd /Aws
+ls
+cd Aws/
+ls
+sudo ssh -i Tere1990.pem 18.157.185.65
+sudo ssh -i Tere1990.pem ubuntu@18.157.185.65
+cd ..
+mkdir FLASKpract
+cd FLASKpract/
+code flaskblog.py
+mkdir templates
+cd templates/
+code home.html
+code about.html
+cd ..
+cd FLASKpract/
+python3 flaskblog.py 
+code templates/
+cd templates/
+code layout.html
+cd ..
+python3 flaskblog.py 
+code from.py
+sudo pip3 install flask-wtf
+sudo pip3 install wtforms
+source anaconda3/bin/activate 
+anaconda-navigator 
+chmod 777 /home/robi/.local/share
+chmod 777 file:///home/robi/.local/share/jupyter/runtime/nbserver-25939-open.html
+chmod 777 /home/robi/.local/share/jupyter/runtime/nbserver-25939-open.html
+chmod 777 /home/robi/.local/share/jupyter/runtime
+cd  /home/robi/.local/share/jupyter/runtime
+ls -a
+ls -
+clear
+cd ~
+ls | grep 'my'
+cd anaconda3/bin/
+ls
+sudo source anaconda3/bin/activate 
+source anaconda3/bin/activate 
+sudo anaconda-navigator 
+anaconda-navigator 
+cd ..
+ls
+cd FLASKpract/
+ls
+cd templates/
+ls
+cd ..
+python3 from.py 
+cd /var/www/LTA
+ls
+cd /backend
+cd backend/
+ls
+ls -l
+ls -l | grep 'db'
+cd ..
+ls
+cd LTA_with_flask/
+ls
+cd ../..
+cd ~
+sudo su postgres 
+ls -l
+suod su psotgresql
+suod su psotgres
+sudo su postgres
+gnome-calculator
+ll
+sudo si psql
+sudo su postgres 
+gnome --version
+ubuntu  --version
+system --version
+ip addr
+#!/bin/bash
+# This script configures .deb based Linux repositories
+# License: public domain
+# Script https://github.com/open-eid/linux-installer
+# See wiki https://github.com/open-eid/linux-installer/wiki/Linux-Packages
+set -e
+# Key used for signing releases
+RIA_KEY="""-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: GPGTools - https://gpgtools.org
+
+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
+K2czbpReKw==
+=aSyh
+-----END PGP PUBLIC KEY BLOCK-----
+"""
+add_key() {
+  keystring="0xC6C83D68 'RIA Software Signing Key <signing@ria.ee>'";   echo "Adding key to trusted key set (apt-key add)";   echo "$keystring";   echo "$RIA_KEY" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/ria-repository.gpg > /dev/null; }
+test_sudo() {   if ! command -v sudo>/dev/null; then      make_fail "You must have sudo and be in sudo group\nAs root do: apt-get install sudo && adduser $USER sudo";   fi; }
+test_root() {   if test $(id -u) -eq 0; then     echo "You run this script as root. DO NOT RUN RANDOM SCRIPTS AS ROOT.";     exit 2;   fi; }
+# add the given repository into /etc/apt/sources.list.d
+add_repository() {   umask 0022;   echo "Adding RIA repository to APT sources list (/etc/apt/sources.list.d/ria-repository.list)";   echo "deb https://installer.id.ee/media/ubuntu/ $1 main" | sudo tee /etc/apt/sources.list.d/ria-repository.list; }
+make_install() {   echo "Installing software (apt-get update && apt-get install open-eid)";   sudo apt-get update;   sudo apt-get install opensc "$@"; }
+make_fail() {   echo -e "$1";   exit 3; }
+make_warn() {   echo "### $1";   echo "Press ENTER to continue, CTRL-C to cancel";   read -r dummy; }
+### Install Estonian ID card software
+# check for Debian derivative.
+if ! command -v lsb_release>/dev/null; then   make_fail "# Not a Debian Linux :("; fi
+# we use sudo
+test_root
+test_sudo
+# version   name    LTS   supported until
+# 18.04     bionic  LTS   2023-04
+# 20.04     focal   LTS   2025-04
+# 20.10     groovy   -   2021-07
+LATEST_SUPPORTED_UBUNTU_CODENAME='groovy'
+# check if Debian or Ubuntu
+distro=$(lsb_release -is | tr '[:upper:]' '[:lower:]')
+release=$(lsb_release -rs)
+codename=$(lsb_release -cs)
+case $distro in    debian)       make_warn "Debian is not officially supported";       echo "### Installing possibly missing https support for APT (apt-get install apt-transport-https)"
+      sudo apt-get install apt-transport-https;       case "$codename" in         buster)           make_warn "Debian $codename is not officially supported";           make_warn "Installing from ubuntu-bionic repository";           add_repository bionic;           ;;         *)           make_fail "Debian $codename is not officially supported";           ;;       esac;       ;;    ubuntu|neon);       case $distro in          neon) make_warn "Neon is not officially supported; assuming that it is equivalent to Ubuntu" ;;          *) ;;       esac;       case $codename in         utopic|vivid|wily|trusty|artful|cosmic|disco|xenial|eoan)           make_fail "Ubuntu $codename is not officially supported";           ;;         bionic|focal|groovy)           add_repository $codename;           ;;         *)           make_warn "Ubuntu $codename is not officially supported";           make_warn "Trying to install package for Ubuntu ${LATEST_SUPPORTED_UBUNTU_CODENAME}";           add_repository ${LATEST_SUPPORTED_UBUNTU_CODENAME};           ;;       esac;       ;;    linuxmint);       case $release in         20*)           make_warn "Linuxmint 20 is not officially supported";           add_repository focal;           ;;         19*)           make_warn "LinuxMint 19 is not officially supported";           add_repository bionic;           ;;         *)           make_fail "LinuxMint $release is not officially supported";           ;;       esac;       ;;    elementary*os|elementary);       case $release in         5.*)           make_warn "Elementary OS 5 is not officially supported";           add_repository bionic;           ;;         *)           make_fail "Elementary OS $release is not officially supported";           ;;       esac;       ;;    pop);       case $codename in         artful|cosmic|disco|eoan)           ;;         bionic|focal)           add_repository $codename;           ;;         *)           add_repository ${LATEST_SUPPORTED_UBUNTU_CODENAME};           ;;       esac;       ;;    *);       make_fail "$distro is not supported :(";       ;; esac
+mkdir idkoordi
+cd idkoordi/
+touch install.sh
+nano install.sh 
+sh install.sh 
+sudo apt-get update && sudo apt-get upgrade
+pgrep command
+pgrep --help
+pgrep -l
+pgrep -a
+htop
+htop 
+htop | grep md
+htop
+ps --help
+ps
+ps aux
+htop
+ps
+ps -ef
+ps -ef | grep /usr/libexec/gvfsd
+ls
+cd lta_venv/
+ls
+cd ..
+ls
+cd flaskr
+ls
+code lta_database.py
+cd ../..
+ls
+cd  backend/
+ls
+code lta_transfer_posgress.py 
+code new_test_validator_test.py 
+code lta_to_postgreSQL.py 
+code migration_to_db.py 

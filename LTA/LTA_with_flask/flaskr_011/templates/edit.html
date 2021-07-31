@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First LTA front
+    </title>
+    <style>
+      .body{
+        background: #eeffef;
+      }
+      .wrapper-social {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+        grid-gap:1em;
+        grid-auto-rows:(100PX, auto);
+      }
+      .wrapper-crime {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+        grid-gap:1em;
+        grid-auto-rows:(100PX, auto);
+      }
+      .wrapper-social > div {
+        background: #a3f0a7;
+        padding: 1em;
+      }
+      .wrapper-crime > div {
+        background: #eeffef	;
+        padding: 1em;
+      }
+      
+      .top {
+        display: grid ;
+        grid-template-columns: 5fr 1fr;
+        justify-items: center;
+        background: #72f994
+      }
+      .top-ins {
+        display:  grid;
+        justify-items: center;
+        width: 100%;
+        font-family:  sans-serif;
+        
+      }
+      .top-right{
+        display:  grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        justify-items: stretch;
+        width: 100%;
+        font-family:  sans-serif;
+        
+      }
+      .top-right-itms{
+          display: grid;
+          justify-items: stretch;
+          font-family:  sans-serif;
+      }
+      .top-right-itms-logoff{
+          display: grid;
+          justify-items: end;
+          font-family:  sans-serif;
+          width: 100%;
+      }
+
+      .top-right-itms-myrecord{
+          display: grid;
+          justify-items: end;
+          font-family:  sans-serif;
+          width: 100%;
+          height: 100%;
+
+      }
+      table{
+        width: 40%;
+        text-align: left;
+      }
+      table, th, td {
+        border: 1px solid;
+        border-collapse: collapse;
+        
+      }
+      button{
+        background: #67d883;
+        font-family: sans-serif;
+        border: None;
+        
+      }
+
+      .edit-headers{
+        width: 40%;
+      }
+
+      .edit_fields{
+        width: 60%;
+      }
+      input { width:99%;
+             height:100%;
+            background-color: #f7efef;
+            border-style: none;
+            color: black;
+            font-family: sans-serif;
+                       
+            }
+
+      input:focus{
+        border-style: none;
+        background-color: #dfd6d6;
+        border-color: #dfd6d6;
+        font-family: sans-serif;
+      }    
+     .edit-buttons{
+
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       border-style: None;
+     }
+     .table-div{
+        display: grid;
+        
+
+     }
+    </style>
+  </head>
+  <body class="body">    
+    <div class="top">
+      <div class="top-main">
+        <h2>LTA User dashboard - Edit Record
+        </h2>
+      </div>
+      <div class="top-right">
+        <div class=top-right-itms>
+            <form>
+               <output>
+                   logged in as:
+                   <br>
+                   <span>{{ session["current_user"]}}</span>
+               </output>
+            </form>
+        </div>
+        <div class=top-right-itms-logoff>
+            <form class=top-right-itms-logoff method="GET">
+                <button><a href="{{url_for('users.logoff')}}"style="text-decoration: none;color:rgb(0, 0, 0);">Log off</a></button>
+            </form>
+        </div>
+        <div class=top-right-itms-counter>
+            <div class=top-right-itms-myrecords-r>
+                recorded by me:
+                <br>
+                {{own_records}}
+            </div>
+            
+        </div>
+        <div class=top-right-itms-myrecord>
+            <form class=top-right-itms-myrecord method="GET">
+                <button><a href="{{url_for('dashboard.main_input')}}" style="text-decoration: none;color:rgb(0, 0, 0);" >Get to registration</a></button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <div >
+    <div class="table-div">
+      <table>
+        <form action="{{url_for('dashboard.edit_record')}}" method="POST">
+        <caption>record {{id}} editor </caption>
+        <tr >
+            <th class= edit-headers>{{headers[0]}}</th>
+            <td ><input  Id = "edit_id"  class="edit_id"  name="edit_id" type="text" value="{{id}}"></td>
+        </tr>
+        <tr>
+            <th>{{headers[1]}}</th>
+            <td ><input  class="edit_volume" name="edit_volume" type="text" value="{{volume}}"></td>
+        </tr>
+        <tr>
+            <th>{{headers[2]}}</th>
+            
+            
+            <td ><input  class="edit_names" name="edit_names" type="text" value="{{names}}"></td>
+                    
+          </tr>
+          <tr>
+            <th>{{headers[3]}}</th>
+            
+            <td ><input  class="edit_sex"  name="edit_sex" type="text" value="{{sex}}"></td>
+                    
+          </tr>
+        <tr>
+          <th>{{headers[4]}}</th>
+          
+          <td ><input  class="edit_height" name="edit_height" type="text" value="{{height}}"></td>
+                
+        </tr>
+        <tr>
+          
+          <th>{{headers[5]}}</th>
+          
+          <td ><input  class="edit_build" name="edit_build" type="text" value="{{build}}"></td>
+             
+            </tr>
+        <tr>
+        
+        <th>{{headers[6]}}</th>
+        
+        <td ><input  class="edit_dentition" name="edit_dentition"  type="text" value="{{dentition}}"></td>
+         
+          </tr>
+      <tr>
+          
+          <th>{{headers[7]}}</th>
+          
+          <td ><input  class="edit_peculiarities" name="edit_peculiarities" type="text" value="{{peculiarities}}"></td>
+           
+              </tr>
+      <tr>
+          
+          <th>{{headers[8]}}</th>
+          
+          <td ><input  class="edit_birthdate" name="edit_birthdate" type="text" value="{{birthdate}}"></td>
+           
+         </tr>
+      <tr>
+        
+        <th>{{headers[9]}}</th>
+        
+        <td ><input  class="edit_birthplace" name="edit_birthplace" type="text" value="{{birthplace}}"></td>
+         
+          </tr>
+      <tr>
+          
+          <th>{{headers[10]}}</th>
+          
+          <td ><input  class="edit_place_of_residence" name="edit_place_of_residence" type="text" value="{{place_of_residence}}"></td>
+           
+        
+        </tr>
+      <tr>
+          
+          <th>{{headers[11]}}</th>
+          <td ><input  class="edit_residence" name="edit_residence" type="text" value="{{residence}}"></td>
+           
+                <tr>
+
+          <th>{{headers[12]}}</th>
+          
+          <td ><input  class="edit_religion" name="edit_religion" type="text" value="{{religion}}"></td>
+           
+        
+        </tr>
+      <tr>
+        <th>{{headers[13]}}</th>
+        
+        <td ><input  class="edit_childhood" name="edit_childhood" type="text" value="{{childhood}}"></td>
+               </tr>
+      <tr>
+        <th>{{headers[14]}}</th>
+        
+        <td ><input  class="marital_status" name="edit_marital_status" type="text" value="{{marital_status}}"></td>
+         
+            </tr>
+      <tr>
+        <th>{{headers[15]}}</th>
+        
+        <td ><input  class="edit_children" name="edit_children" type="text" value="{{children}}"></td>
+         
+            </tr>
+      <tr>
+        <th>{{headers[16]}}</th>
+        
+        <td ><input  class="edit_occupation" name="edit_occupation" type="text" value="{{occupation}}"></td>
+             
+        </tr>
+         <tr>
+        <th>{{headers[17]}}</th>
+        
+        <td ><input  class="edit_occupation_2" name="edit_occupation_2" type="text" value="{{occupation_2}}"></td>
+             
+        </tr>
+      <tr>
+        <th>{{headers[18]}}</th>
+      
+        <td ><input  class="edit_occupation_3" name="edit_occupation_3" type="text" value="{{occupation_3}}"></td>
+         
+            </tr>
+      <tr>
+        <th>{{headers[19]}}</th>
+        
+        <td ><input  class="edit_military_service" name="edit_military_service" type="text" value="{{military_service}}"></td>
+         
+            </tr>
+      <tr>
+        <th>{{headers[20]}}</th>
+        
+        <td ><input  class="edit_literacy" name="edit_literacy" type="text" value="{{literacy}}"></td>
+         
+       </tr>
+           <tr>
+          <th>{{headers[21]}}</th>
+           
+          <td ><input  class="edit_eduction" name="edit_eduction" type="text" value="{{eduction}}"></td>
+           
+        </tr>
+           <tr>
+          <th>{{headers[22]}}</th>
+          
+          <td ><input  class="edit_history" name="edit_criminal_history" type="text" value="{{criminal_history}}"></td>
+           </tr>
+           <tr>
+         <th>{{headers[23]}}</th>
+          
+          <td ><input  class="edit_crime" name="edit_crime" type="text" value="{{crime}}"></td>
+                
+               </tr>
+         <th>{{headers[24]}}</th>
+          
+          <td ><input  class="edit_sentence_begins" name="edit_sentence_begins" type="text" value="{{sentence_begins}}"></td>
+                 
+               
+          <tr>
+         <th>{{headers[25]}}</th>
+          
+          <td ><input  class="edit_sentence_expires" name="edit_sentence_expires" type="text" value="{{sentence_expires}}"></td>
+            </tr>
+           <tr>
+        <th>{{headers[26]}}</th>
+          
+          <td ><input  class="edit_prison_term_day" name="edit_prison_term_day" type="text" value="{{prison_term_day}}"></td>
+             </tr>
+           <tr>
+       <th>{{headers[27]}}</th>
+          
+          <td ><input  class="edit_ransome" name="edit_ransome" type="text" value="{{ransome}}"></td>
+               </tr>
+             <tr>
+      <th>{{headers[28]}}</th>
+          
+          <td ><input  class="edit_associates" name="edit_associates" type="text" value="{{associates}}"></td>
+                 </tr>
+        <tr>
+          <th>{{headers[29]}}</th>
+          
+          <td ><input  class="edit_degree_of_crime" name="edit_degree_of_crime" type="text" value="{{degree_of_crime}}"></td>
+           </tr>
+        <tr>
+          <th>{{headers[30]}}</th>
+          
+          <td ><input  class="edit_degree_of_punishment" name="edit_degree_of_punishment" type="text" value="{{degree_of_punishment}}"></td>
+            </tr>
+        <tr>
+          <th>{{headers[31]}}</th>
+          
+          <td ><input  class="edit_notes" name="edit_notes" type="text" value="{{notes}}"></td>
+           </tr>
+        <tr>
+          <th>{{headers[32]}}</th>
+          
+          <td ><input  class="edit_arrest_site" name="edit_arrest_site" type="text" value="{{arrest_site}}"></td>
+            </tr>
+          
+        <tr>
+          <th></th>
+          <td class="edit-buttons "> <input type="submit" value="Submit changes"> <form action="{{url_for('dashboard.myrecords')}}"><input type="submit" value="Cancel"></form></td>
+        </tr>
+      </form>
+    </table>
+  
+    </div>
+
+  </body>
+</html>

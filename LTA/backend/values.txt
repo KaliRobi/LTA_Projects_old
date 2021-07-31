@@ -1,0 +1,40 @@
+f"'{val.volume}', '{val.id}', '{val.name_with_aliases}', '{val.sex}', '{val.height_cm}', '{val.build}',  '{val.dentition}',  '{val.special_peculiarities}', '{val.date_of_birth}', '{val.place_of_birth}', '{val.place_of_residence}', '{val.address}', '{val.religion}',  '{val.childhood_status}',  '{val.marital_status}', '{val.number_of_children}', '{val.occupation}', '{val.occupation_2}', '{val.occupation_3}', '{val.military_service}', '{val.literacy}',  '{val.education}', '{val.criminal_history}', '{val.crime}', '{val.crime_sentence_begins}' , '{val.sentence_expires}', '{val.prison_term_day}', '{val.ransome_pengő_fillér}', '{val.associates}', '{val.degree_of_the_crime}', '{val.degree_of_the_punishment}', '{val.notes}','{val.arrest_site}'" 
+
+
+def check_back(new_record):
+    record_json = {"volume" : "new_record.volume",       
+         "id" : "new_record.id",
+         "name_with_aliases" : "new_record.name_with_aliases",
+         "sex" : "new_record.sex",
+         "height_cm" : "new_record.height_cm",
+         "build" : "new_record.build",
+         "dentition" : "new_record.dentition",
+         "special_peculiarities" : "new_record.special_peculiarities",
+         "date_of_birth" : "new_record.date_of_birth",
+         "place_of_birth" : "new_record.place_of_birth",
+         "place_of_residence" : "new_record.place_of_residence",
+         "residence" : "new_record.residence",
+         "religion" : "new_record.religion",
+         "childhood_status" : "new_record.childhood_status",
+         "marital_status" : "new_record.marital_status",
+         "number_of_children" : "new_record.number_of_children",
+         "occupation" : "new_record.occupation",
+         "occupation_2" : "new_record.occupation_2",
+         "occupation_3" : "new_record.occupation_3",
+         "military_service" : "new_record.military_service",
+         "literacy" : "new_record.literacy",
+         "education" : "new_record.education",
+         "criminal_history" : "new_record.criminal_history",
+         "crime" : "new_record.crime",
+         "crime_sentence_begins" : "new_record.crime_sentence_begins",
+         "sentence_expires" : "new_record.sentence_expires",
+         "prison_term_day" : "new_record.prison_term_day",
+         "ransome" : "new_record.ransome",
+         "associates" : "new_record.associates",
+         "degree_of_the_crime" : "new_record.degree_of_the_crime",
+         "degree_of_the_punishment" : "new_record.degree_of_the_punishment",
+         "notes" : "new_record.notes",
+         "arrest_site" : "new_record.arrest_site",
+    }
+
+    'volume', 'id', 'name_with_aliases', 'sex', 'height_cm', 'build', 'dentition', 'special_peculiarities', 'date_of_birth', 'place_of_birth', 'place_of_residence', 'residence', 'religion', 'childhood_status', 'marital_status', 'number_of_children', 'occupation', 'occupation_2', 'occupation_3', 'military_service', 'literacy',  'education', 'criminal_history', 'crime', 'crime_sentence_begins', 'sentence_expires', 'prison_term_day', 'ransome', 'associates', 'degree_of_the_crime', 'degree_of_the_punishment', 'notes', 'arrest_site'

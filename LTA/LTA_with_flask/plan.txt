@@ -1,0 +1,60 @@
+remplate-mail
+	instance
+	flaskr
+		static
+			css files
+		templates
+			html for landingpage, record_input and record_validate pages
+	landing.py
+		rendres the landingpage.
+		there is where visitors can checck around, when any kind of content will be available
+		and where the user will be able to log in and get to the next two pages
+		('/')	
+		'what s this all about' page
+			describes the project history 
+			informs about  whats up at the moment untill the site is ready
+			('/about')	
+		'map'
+			this page will give a map about where these cases where registered
+			obciosuly millions of ways  to put the db on a map.
+			postgresql has a postGiS API,  with time..
+			('/map')
+		'Analytics'
+			the page will be a dashboard where the visitors can see and filter data
+			data will be visalised
+			('/analytics')
+						
+	record_input.py
+		This is where all the the record attributes will be entered in the appl
+		logon required
+		slieds left way to getto the validation page
+		/workpad/input
+	record_validate.py
+		This is where the users can modify the data what they entered.
+		logon required
+		slides right way to get to the input page
+		/workpad/validate	
+	__init__.py
+		creates the app
+		registeing the blueprints
+			
+
+			
+	
+  whene the user clcicks on the edit, it needs to get the id of that coumn. the edits list index needs to inditace which id the function should take
+
+  the taken id goes to a variable and make a query from the database.
+
+  when it is done the line, needs to be feed into the html table, where the cells are editable. the submit button will change 
+
+  the editable fileds will do the same api  what the input fileds, 
+
+  the html api send the data to a function which compares the original and the new dicts and  
+
+
+  weekly plan: 
+  WTF-FLASK for input verification
+  Anaytics plannaing (data serialization and prosgres migration with UI and feature planning .)
+
+  no need for an extra id only fo to backup the id system. the id provided vy the resource is good. a function needs to check the if this id is already in the system. if not then good to go.
+  when the id needs to be changed then the other id will be used

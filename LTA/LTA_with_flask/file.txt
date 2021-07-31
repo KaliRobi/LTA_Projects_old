@@ -1,0 +1,549 @@
+import os
+from flask import Flask
+import psycopg2
+
+with self.connection as cursor:
+    cursor.execute(open("schema.sql", "r").read())
+
+def create_app(test_config=None):
+    #create and configure the base of the app
+    # so the folders are relative to this currecnt one.
+    app = Flask(__name__, instance_relative_config=True)
+    app.config.from_mapping(
+        secret_key = 'smthing',
+        RECORDS_DATABASE  =  os.path.join(app.instance_path, 'flask.postgres'),
+        USERS_DATABASE = os.path.join(app.instance_path, 'flask.postgres2')
+
+    )
+
+
+     #registering the other blueprints
+
+    from . import lta_database
+    lta_database.init_app(app)
+
+    from . import landing
+    app.register_blueprint(landing.bp)
+    
+    
+    if test_config is None:
+         app.config.from_pyfile('config.py', silent=True)
+    else:
+        app.config.from_mapping(test_config)
+    
+    try:
+        os.makedirs(app.instance_path)
+    except OSError:
+        pass
+
+    app.route('/hello')
+    def hello():
+        return 'Hello World'
+    
+    
+    return app
+
+
+CREATE TABLE IF NOT EXISTS lta_users_teszt (
+  U_id  SERIAL PRIMARY KEY,
+  username VARCHAR(30) UNIQUE NOT NULL,
+  password TEXT NOT NULL
+);
+ table, th, td {
+        border: solid;
+        border-collapse: collapse;
+      }
+
+
+    <th>
+          {{headers[0]}}
+         </th>
+         <th>
+          {{headers[1]}}
+         </th>
+         <th>
+          {{headers[2]}}
+         </th>
+         <th>
+          {{headers[3]}}
+         </th>
+         <th>
+          {{headers[4]}}
+         </th>
+         <th>
+          {{headers[5]}}
+         </th>
+         <th>
+          {{headers[6]}}
+         </th>
+         <th>
+          {{headers[7]}}
+         </th>
+         <th>
+          {{headers[8]}}
+         </th>
+         <th>
+          {{headers[9]}}
+         </th>
+         <th>
+          {{headers[10]}}
+          </th>
+          <th>
+            {{headers[11]}}
+          </th>
+          <th>
+          {{headers[12]}}
+         </th>
+         <th>
+          {{headers[13]}}
+         </th>
+         <th>
+          {{headers[14]}}
+         </th>
+         <th>
+          {{headers[15]}}
+         </th>
+         <th>
+          {{headers[16]}}
+         </th>
+
+         <th>
+          {{headers[17]}}
+         </th>
+         <th>
+          {{headers[18]}}
+         </th>
+         <th>
+          {{headers[19]}}
+         </th>
+         <th>
+          {{headers[20]}}
+          </th>
+          <th>
+            {{headers[21]}}
+           </th>
+           <th>
+            {{headers[22]}}
+          </th>
+           <th>
+            {{headers[23]}}
+           </th>
+           <th>
+            {{headers[24]}}
+           </th>
+           <th>
+            {{headers[25]}}
+           </th>
+           <th>
+            {{headers[26]}}
+           </th>
+           <th>
+            {{headers[27]}}
+           </th>
+           <th>
+            {{headers[28]}}
+           </th>
+           <th>
+            {{headers[29]}}
+           </th>
+           <th>
+            {{headers[30]}}
+            </th>
+            <th>
+              {{headers[31]}}
+             </th>
+             <th>
+              {{headers[32]}}
+            </th>
+
+            [(5, '1935-256', 'jon does 2', 'n', 152, 'a', 'a', 'Null', '1912-02-17', 'Derecske', 'Debrecen', 'Tancsisc 15', 'r', 'tt', 'H', 5, 'napszamos', 'VII', 'IX', 'Null', 'io', '6 elemi', 'Null', 'jovedeki', '1935-03-02', '1935-03-05', 3, 100, 'k', 'k', 'k', 'Null', 'Null'), 
+            
+            (5, '1935-256', 'jon does 2', 'n', 152, 'a', 'a', 'Null', '1912-02-17', 'Derecske', 'Debrecen', 'Tancsisc 15', 'r', 'tt', 'H', 5, 'napszamos', 'VII', 'IX', 'Null', 'io', '6 elemi', 'Null', 'jovedeki', '1935-03-02', '1935-03-05', 3, 100, 'k', 'k', 'k', 'Null', 'Null'), 
+            
+            (5, '1935-256', 'jon does 2', 'n', 152, 'a', 'a', 'Null', '1912-02-17', 'Derecske', 'Debrecen', 'Tancsisc 15', 'r', 'tt', 'H', 5, 'napszamos', 'VII', 'IX', 'Null', 'io', '6 elemi', 'Null', 'jovedeki', '1935-03-02', '1935-03-05', 3, 100, 'k', 'k', 'k', 'Null', 'Null'),
+            
+            (5, '1935-256', 'jon does 2', 'n', 152, 'a', 'a', 'Null', '1912-02-17', 'Derecske', 'Debrecen', 'Tancsisc 15', 'r', 'tt', 'H', 5, 'napszamos', 'VII', 'IX', 'Null', 'io', '6 elemi', 'Null', 'jovedeki', '1935-03-02', '1935-03-05', 3, 100, 'k', 'k', 'k', 'Null', 'Null')]
+
+                    
+volume=volume, id=id, name=name, sex=sex, height=height, build=build, dentition=dentition, peculiarities=peculiarities, birthdate=birthdate, birthplace=birthplace, place_of_residence=place_of_residence, residence=residence, religion=religion, childhood=childhood, marital_statusmarital_status, children=children, occupation=occupation,occupation_2=occupation_2, occupation_3=occupation_3, military_service=military_service, literacy=literacy, eduction=eduction, criminal_history=criminal_history, crime=crime, sentence_begins=sentence_begins, sentence_expires=sentence_expires, prison_term_day=sentence_expires, ransome=ransome, associates=associates, degree_of_crime=degree_of_crime, degree_of_punishment=degree_of_punishment, notes=notes, arrest_site=arrest_site
+
+
+
+szinek
+top #72f994
+back #dfe9e0;
+  vrapper  #a3f0a7 	;
+   vrapper dark #a1d5a3 	;
+
+
+
+
+   <tr>
+          {% for header in headers1 %}
+          <th>{{header}}</th>
+          {%endfor%}
+          </tr>
+         <tr>
+           {% for record in records1%}
+           <td>{{record}}</td>
+           {%endfor%}
+         </tr>
+         <tr>
+          {% for header in headers2 %}
+          <th>{{header}}</th>
+          {%endfor%}
+         </tr>          
+          <tr>
+          {%for record in records2%}                
+              <td>{{record}}</td>                
+          {%endfor%}
+          </tr>
+          <th>
+            <a href="">edit</a>
+          </th>
+        </tr>
+
+
+		.body{
+        background: #80B584;
+      }
+      .wrapper-social {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+        grid-gap:1em;
+        grid-auto-rows:(100PX, auto);
+      }
+      .wrapper-crime {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+        grid-gap:1em;
+        grid-auto-rows:(100PX, auto);
+      }
+      .wrapper-social > div {
+        background:  #59955C 	;
+        padding: 1em;
+      }
+      .wrapper-crime > div {
+        background:  #4a7c4c 	;
+        padding: 1em;
+      }
+      
+      .top {
+        display: grid ;
+        grid-template-columns: 5fr 1fr;
+        justify-items: center;
+        background: #1FCB4A
+      }
+      .top-ins {
+        display:  grid;
+        justify-items: center;
+        width: 100%;
+        font-family:  sans-serif;
+        
+      }
+      .top-right{
+        display:  grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        justify-items: stretch;
+        width: 100%;
+        font-family:  sans-serif;
+        
+      }
+      .top-right-itms{
+          display: grid;
+          justify-items: stretch;
+          font-family:  sans-serif;
+      }
+      .top-right-itms-logoff{
+          display: grid;
+          justify-items: end;
+          font-family:  sans-serif;
+          width: 100%;
+      }
+
+      .top-right-itms-myrecord{
+          display: grid;
+          justify-items: end;
+          font-family:  sans-serif;
+          width: 100%;
+          height: 100%;
+
+      }
+      table{
+        width: 100%;
+        text-align: left;
+      }
+      table, th, td {
+        border: 1px solid;
+        border-collapse: collapse;
+        
+      }
+      button{
+        background: #17ae3d;
+
+      }
+
+      edited = [edited_volume,edited_id, edited_names, edited_sex, edited_height, edited_build, edited_dentition, edited_peculiarities, edited_birthdate, edited_birthplace, edited_place_of_residence, edited_residence,edited_religion, edited_childhood, edited_marital_status, edited_children, edited_occupation,edited_occupation_2, edited_occupation_3,  edited_military_service, edited_literacy, edited_eduction, edited_criminal_history, edited_crim, edited_sentence_begins, edited_sentence_expires, edited_prison_term_day, edited_ransome, edited_associates, edited_degree_of_crime, edited_degree_of_punishment, edited_notes, edited_arrest_site]
+
+
+
+      <th></th>
+             {% for e in id%}
+          <td> <form action={{url_for('dashboard.edit_record')}}> <input type="submit"  value="Edit"><input type="hidden" name="1922-123" value="1921-123" ></form></td>
+            {%endfor%}
+        </tr>
+
+
+
+        volume = [val[0] for val in records]        
+    id = [val[1] for val in records]
+    names = [val[2] for val in records]
+    sex = [val[3] for val in records]
+    height = [val[4] for val in records]
+    build = [val[5] for val in records]
+    dentition = [val[6] for val in records]
+    peculiarities = [val[7] for val in records]
+    birthdate = [val[8] for val in records]
+    birthplace = [val[9] for val in records]
+    place_of_residence = [val[10] for val in records]
+    residence = [val[11] for val in records]
+    religion = [val[12] for val in records]
+    childhood = [val[13] for val in records]
+    marital_status = [val[14] for val in records]
+    children = [val[15] for val in records]
+    occupation= [val[16] for val in records]
+    occupation_2 = [val[17] for val in records]
+    occupation_3 = [val[18] for val in records]
+    military_service = [val[19] for val in records]
+    literacy= [val[20] for val in records]
+    eduction = [val[21] for val in records]
+    criminal_history = [val[22] for val in records]
+    crime= [val[23] for val in records]
+    sentence_begins = [val[24] for val in records]
+    sentence_expires = [val[25] for val in records]
+    prison_term_day = [val[26] for val in records]
+    ransome = [val[27] for val in records]
+    associates = [val[28] for val in records]
+    degree_of_crime = [val[29] for val in records]
+    degree_of_punishment = [val[30] for val in records]
+    notes = [val[31] for val in records]
+    arrest_site = [val[32] for val in records]
+
+
+
+
+    volume ='dummy'
+    id ='dummy'
+    names = 'dummy'
+    sex = 'dummy'
+    height = 'dummy'
+    build = 'dummy'
+    dentition = 'dummy'
+    peculiarities = 'dummy'
+    birthdate  = 'dummy'
+    birthplace  = 'dummy'
+    place_of_residence = 'dummy'
+    residence = 'dummy'
+    religion ='dummy'
+    childhood = 'dummy'
+    marital_status = 'dummy'
+    children = 'dummy'
+    occupation= 'dummy'
+    occupation_2 = 'dummy'
+    occupation_3 = 'dummy'
+    military_service = 'dummy'
+    literacy= 'dummy'
+    eduction = 'dummy'
+    criminal_history = 'dummy'
+    crime= 'dummy'
+    sentence_begins = 'dummy'
+    sentence_expires = 'dummy'
+    prison_term_day = 'dummy'
+    ransome = 'dummy'
+    associates = 'dummy'
+    degree_of_crime = 'dummy'
+    degree_of_punishment ='dummy'
+    notes = 'dummy'
+    arrest_site = 'dummy'
+
+                return render_template('edit.html', headers=headers, volume=volume, id=id, names=names, sex=sex, height=height, build=build, dentition=dentition, peculiarities=peculiarities, birthdate=birthdate, birthplace=birthplace, place_of_residence=place_of_residence, residence=residence, religion=religion, childhood=childhood, marital_status=marital_status, children=children, occupation=occupation,occupation_2=occupation_2, occupation_3=occupation_3, military_service=military_service, literacy=literacy, eduction=eduction, criminal_history=criminal_history, crime=crime, sentence_begins=sentence_begins, sentence_expires=sentence_expires, prison_term_day=prison_term_day, ransome=ransome, associates=associates, degree_of_crime=degree_of_crime, degree_of_punishment=degree_of_punishment, notes=notes, arrest_site=arrest_site )
+
+
+return render_template('edit.html', headers=headers, volume=edited_volume, id=edited_id, names=edited_names, sex=edited_sex, height=edited_height, build=edited_build, dentition=edited_dentition, peculiarities=edited_peculiarities, birthdate=edited_birthdate, birthplace=edited_birthplace, place_of_residence=edited_place_of_residence, residence=edited_residence, religion=edited_religion, childhood=edited_childhood, marital_statusedited_=marital_status, children=edited_children, occupation=edited_occupation,occupation_2=edited_occupation_2, occupation_3=edited_occupation_3, military_service=edited_military_service, literacy=edited_literacy, eduction=edited_eduction, criminal_history=edited_criminal_history, crime=edited_crime, sentence_begins=edited_sentence_begins, sentence_expires=edited_sentence_expires, prison_term_day=edited_prison_term_day, ransome=edited_ransome, associates=edited_associates, degree_of_crime=edited_degree_of_crime, degree_of_punishment=edited_degree_of_punishment, notes=edited_notes, arrest_site=edited_arrest_site )
+
+
+
+  print('else')
+    return render_template('edit.html', headers=headers, volume=volume, id=id, names=names, sex=sex, height=height, build=build, dentition=dentition, peculiarities=peculiarities, birthdate=birthdate, birthplace=birthplace, place_of_residence=place_of_residence, residence=residence, religion=religion, childhood=childhood, marital_status=marital_status, children=children, occupation=occupation,occupation_2=occupation_2, occupation_3=occupation_3, military_service=military_service, literacy=literacy, eduction=eduction, criminal_history=criminal_history, crime=crime, sentence_begins=sentence_begins, sentence_expires=sentence_expires, prison_term_day=prison_term_day, ransome=ransome, associates=associates, degree_of_crime=degree_of_crime, degree_of_punishment=degree_of_punishment, notes=notes, arrest_site=arrest_site )
+
+
+return render_template('edit.html', headers=headers, volume=volume, id=id, names=names, sex=sex, height=height, build=build, dentition=dentition, peculiarities=peculiarities, birthdate=birthdate, birthplace=birthplace, place_of_residence=place_of_residence, residence=residence, religion=religion, childhood=childhood, marital_status=marital_status, children=children, occupation=occupation,occupation_2=occupation_2, occupation_3=occupation_3, military_service=military_service, literacy=literacy, eduction=eduction, criminal_history=criminal_history, crime=crime, sentence_begins=sentence_begins, sentence_expires=sentence_expires, prison_term_day=prison_term_day, ransome=ransome, associates=associates, degree_of_crime=degree_of_crime, degree_of_punishment=degree_of_punishment, notes=notes, arrest_site=arrest_site )
+
+        1 | kali_robi          | 123456
+   11 | testrow            | testrow
+   12 | kali_robi2         | 123456
+   15 | Magyarosi Adam     | 123456
+   16 | Nagy David         | 123456
+   17 | kovacs krisztina   | 123456
+   18 | hrnadfoi annamaria | 123456
+
+
+   volume = request.form['volume']
+        input_from_form.update({'volume': volume})
+
+        id = request.form['id']
+        input_from_form.update({'id': id})
+
+        name = request.form['name']
+        input_from_form.update({'name': name})
+
+        sex = request.form['sex']
+        input_from_form.update({'sex': sex})
+
+        height = request.form['height']
+        input_from_form.update({'height': height})
+
+        build = request.form['build']
+        input_from_form.update({'build': build})
+
+        dentition = request.form['dentition']
+        input_from_form.update({'dentition': dentition})
+
+        special_peculiarities = request.form['special_peculiarities']
+        input_from_form.update({'special_peculiarities': special_peculiarities})
+
+        date_of_birth = request.form['date_of_birth']
+        input_from_form.update({'date_of_birth': date_of_birth})
+
+        place_of_birth = request.form['place_of_birth']
+        input_from_form.update({'place_of_birth': place_of_birth})
+
+        place_of_residence = request.form['place_of_residence']
+        input_from_form.update({"place_of_residence": place_of_residence})
+
+        residence = request.form['residence']
+        input_from_form.update({"residence": residence})
+
+        religion = request.form['religion']
+        input_from_form.update({'religion': religion})
+
+        childhood_status = request.form['childhood_status']
+        input_from_form.update({'childhood_status': childhood_status})
+
+        marital_status = request.form['marital_status']
+        input_from_form.update({'marital_status': marital_status})
+
+        number_of_children = request.form['number_of_children']
+        input_from_form.update({'number_of_children': number_of_children})
+
+        occupation = request.form['occupation']
+        input_from_form.update({'occupation': occupation})
+
+        occupation_2 = request.form['occupation_2']
+        input_from_form.update({'occupation_2': occupation_2})
+
+        occupation_3 = request.form['occupation_3']
+        input_from_form.update({'occupation_3': occupation_3})
+
+        military_service = request.form['military_service']
+        input_from_form.update({'military_service': military_service})
+
+        literacy = request.form['literacy']
+        input_from_form.update({'literacy': literacy})
+
+        education = request.form['education']
+        input_from_form.update({'education': education})
+
+        criminal_history = request.form['criminal_history']
+        input_from_form.update({'criminal_history': criminal_history})
+
+        crime = request.form['crime']
+        input_from_form.update({'crime': crime})
+
+        sentence_begins = request.form['sentence_begins']
+        input_from_form.update({'sentence_begins': sentence_begins})
+
+        sentence_expires = request.form['sentence_expires']
+        input_from_form.update({'sentence_expires': sentence_expires})
+
+        prison_term_day = request.form['prison_term_day']
+        input_from_form.update({'prison_term_day': prison_term_day})
+
+        ransome = request.form['ransome']
+        input_from_form.update({'ransome': ransome})
+
+        associates = request.form['associates']
+        input_from_form.update({'associates': associates})
+
+        degree_of_crime = request.form['degree_of_crime']
+        input_from_form.update({'degree_of_crime': degree_of_crime})
+
+        degree_of_punishment = request.form['degree_of_punishment']
+        input_from_form.update({'degree_of_punishment': degree_of_punishment})
+
+        notes = request.form['notes']
+        input_from_form.update({'notes': notes})
+
+        arrest_site = request.form['arrest_site']
+        input_from_form.update({'arrest_site': arrest_site})
+
+        username = session.get("current_user")
+
+
+
+    volume, i, names, sex, height, build, dentition, peculiarities, birthdatey, birthplacey, place_of_residence, residence, religio, childhood, marital_status, children, occupatio, occupation_2, occupation_3, military_service, literac, eduction, criminal_history, crim, sentence_begins, sentence_expires, prison_term_day, ransome, associates, degree_of_crime, degree_of_punishmen, notes, arrest_site'
+
+    \d{4}[/|.|-][a-zA-Z]{1,2}[.|/|-][0-9]{,2}|[a-zA-Z]{1,2}
+
+    0001 --> date was modified by the csvToSQL script so either the month or the day were missing 
+
+
+
+    volume, id, name, sex, height, build, dentition, special_peculiarities, date_of_birth, place_of_birth, place_of_residence, residence, religion, childhood_status, marital_status, number_of_children, occupation, occupation_2, occupation_3, military_service, literacy, education, criminal_history, crime, sentence_begins, sentence_expires, prison_term_day, ransome, associates, degree_of_crime, degree_of_punishment, notes, arrest_site,
+
+
+    case = ['Null' if atr == ''  else atr for atr in case ]
+        case = ['Null' if atr == 'na' else atr for atr in case]
+        case = ['Null' if atr == 'NA' else atr for atr in case]
+        case = ['Null' if atr == 'N.A' else atr for atr in case]
+        case = ['Null' if atr == 'n.a' else atr for atr in case]
+
+
+
+INPUT.py line 28
+        # class Record_input(Form):
+    #     volume = StringField([validators.Regexp('\b\d{1,3}\b|^Null$', message='Allowed: max 3 digits or Null.' )])
+    #     id  = StringField([validators.Regexp('\b\d{4}-\d{0,8}\b|^Null$', message='Year and serial number on the left upper corner of the record.' )])
+    #     names = StringField([validators.Regexp('\w+|^Null')])
+    #     sex = StringField([validators.AnyOf(['f','n','Null'], message='Please enter n or f.' )])
+    #     height = StringField([validators.NumberRange(min='0', max='200', message="This range expected to be between 100 and 200." )]) 
+    #     build = StringField([validators.Regexp('\b\D{1,3}\b|^Null$', message='Please enter the correct format')])
+    #     dentition = StringField([validators.AnyOf(['é', 'h', 'Null'], message='Please enter é or h.')])
+    #     peculiarities = StringField([validators.InputRequired(message='If this field is empty on the record enter Null')])
+    #     birthdate = StringField([validators.Regexp("\d{4}-\d{2}-\d{2}|^Null$", message="Entered wrong data format please try (yyyy-mm-ddd) or Null" )])
+    #     birthplace = StringField([validators.InputRequired(message='If this field is empty on the record enter Null')])
+    #     place_of_residence = StringField([validators.InputRequired(message='If this field is empty on the record enter Null')])
+    #     residence = StringField([validators.InputRequired(message='If this field is empty on the record enter Null')])
+    #     religion = StringField([validators.AnyOf(['b','e','fn','gk','i','lu','r','rk','u', 'Null'], message='If this field is empty on the record enter Null')])
+    #     childhood = StringField([validators.AnyOf(['t','tt','Null'], message='Enter t, tt or Null according to the documentation')])
+    #     marital_status = StringField([validators.AnyOf(['e','eá','evh','h','hké','hvh','ö','vh','vhö', 'Null'], message= 'Enter the valid value, if not sure, check the documentation')])
+    #     children = StringField([validators.NumberRange(min='0', max=20, message='This field expected to be between 0 and 20.')])
+    #     occupation = StringField([validators.InputRequired(message='If this field is empty on the record enter Null')])
+    #     occupation_2 = StringField([validators.InputRequired(message='Look it up or just enter Null')])
+    #     occupation_3 = StringField([validators.InputRequired(message='Look it up or just enter Null')])
+    #     military_service = StringField([validators.InputRequired(message='If this field is empty on the record enter Null')])
+    #     literacy = StringField([validators.AnyOf(['io', 'i', 'nt', 'k', 'o', 'Null'], message="io,i,nt,k,o or Null, if not sure please lookp up the documentation" )])
+    #     eduction = StringField([validators.InputRequired(message='If this field is empty on the record enter Null')])
+    #     criminal_history = StringField([validators.InputRequired(message='If this field is empty on the record enter Null')])
+    #     crime = StringField([validators.InputRequired(message='If this field is empty on the record enter Null')])
+    #     sentence_begins = StringField([validators.Regexp("\d{4}-\d{2}-\d{2}|^Null$", message="Entered wrong data format please try (yyyy-mm-ddd) or Null" )])
+    #     sentence_expires = StringField([validators.Regexp("\d{4}-\d{2}-\d{2}|^Null$", message="Entered wrong data format please try (yyyy-mm-ddd) or Null" )])
+    #     prison_term_day = StringField([validators.Regexp('\b\d{4}\b|^Null$', message='The difference between the two previous dates, in days. 1 month = 30 days.')])
+    #     ransome = StringField([validators.Regexp('\b\d{4}\b|^Null$', message='The ransome in pengo.')])
+    #     associates = StringField([validators.InputRequired(message='If this field is empty on the record enter Null')])
+    #     degree_of_crime = StringField([validators.AnyOF(['b','k', 'v'], message='b, k, v if not sure look up the documentation')])
+    #     degree_of_punishment = StringField([validators.AnyOF(['b','e','f','fe','szd'], message='b, e,f,fe,szd if not sure look up the documentation')])
+    #     notes = StringField([validators.InputRequired(message='If this field is empty on the record enter Null')])
+    #     arrest_site = StringField([validators.InputRequired(message='If this field is empty on the record enter Null')])
+    

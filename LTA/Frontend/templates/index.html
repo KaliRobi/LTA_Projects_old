@@ -1,0 +1,248 @@
+<html> 
+
+    <head><head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>First LTA front</title>
+
+        <style>
+
+            .body {
+
+                background: rgb(236, 236, 241);
+
+            }
+
+            .menu_items{
+
+                display: grid;
+
+                background: rgb(157, 160, 163);
+
+                align-items: center;
+
+                grid-template-columns: repeat(5, 1fr);
+
+                grid-auto-rows: 50px;
+
+                grid-gap: 1em;
+
+                padding: 1em;
+
+            }
+
+ 
+
+            .menu_item {
+
+                display: grid;
+
+                background: rgb(180, 180, 192) ;
+
+                grid-auto-rows: 60px;
+
+                align-items: center;
+
+                justify-content: center;
+
+ 
+
+            }
+
+            .menu_item:hover{
+
+                background: rgb(157, 160, 163) ;
+
+                transition: 1s ease;
+
+                transform: scale(1.02);
+
+                
+
+                }
+
+ 
+
+            .btn {
+
+                background-color: #ffffff;
+
+                color:  rgb(206, 36, 36);
+
+                padding: 1em;
+
+                border-radius: 5px;
+
+                border: none;
+
+                cursor: pointer;
+
+            }
+
+            .btn:focus{
+
+                outline: none;
+
+            }
+
+            .btn:active{
+
+                transform: scale(0.98);
+
+            }
+
+            .toasts{
+
+                position: fixed;
+
+                top: 10px;
+
+                right: 10px;
+
+                display: grid;
+
+                width: 20%;
+
+            }
+
+            .toast{
+
+                display: grid;
+
+                background-color: #fff;
+
+                grid-template-rows: 120px;
+                align-items: center;
+
+                border-radius: 5px;
+
+                padding: 1rem 2rem;
+
+                margin: 0.5rem;
+
+            }
+
+                       
+
+            .p-header{
+
+                grid-area: h;                
+
+                display: grid;
+
+                justify-content: center ;
+            }
+
+            .logon-box{
+
+                display: grid;    
+
+                grid-area: l;            
+
+                width: 200px;
+                   
+                font-size: 12;
+
+            }
+            .top-items {
+
+                display: grid ;            
+
+                grid-template-columns: 1fr 9fr;
+
+                grid-template-areas: 
+
+                "l h h h h h h h h h h";
+
+                grid-row: 50px;
+
+                }
+           
+     </style>
+
+ 
+
+    </head>
+
+    <body class="body">
+
+      
+
+<div class="main_body">
+
+    <div class="menu_bar">
+
+        <div class="top-items">
+
+            <div class="top-item logon-box">
+
+                <div class="logon-box-item"> 
+
+                <label for="username">Username:</label>
+
+                </div> 
+
+                <div class="logon-box-item">
+
+                <input type="text">
+
+            </div>
+
+                <div class="logon-box-item">
+
+                <label for="password">Password:</label>
+
+            </div>
+
+                <div class="logon-box-item">
+
+            </div>
+
+                <input type="text">
+
+                
+
+            </div>
+
+            <div class="top-item p-header">
+                    
+                <h3>LTA Historical Database Landing page</h3> 
+
+            </div>
+
+        </div>
+
+        <div class="menu_items">
+
+            <div class="menu_item">Whats this all about</div>
+
+            <div class="menu_item">Map</div>
+
+            <div class="menu_item">Analytics</div>
+
+            <div class="menu_item">Contact</div>
+
+        </div>
+
+    <div class="toasts" id="toasts">
+
+        
+
+        
+
+    </div>
+
+    <button class="btn"  id="button">show notification</button> 
+
+ 
+
+    </div>
+
+</div>
+
+<script src="script.js" ></script>
+
+</body>

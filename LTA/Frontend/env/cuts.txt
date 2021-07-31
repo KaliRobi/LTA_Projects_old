@@ -1,0 +1,27 @@
+# database()
+# insert_into(new_record)
+
+, (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s)
+LTAuser, volume, id, name, sex, height, build, dentition, special_peculiarities, date_of_birth, place_of_birth, place_of_residence, residence, religion, childhood_status, marital_status, number_of_children, occupation, occupation_2, occupation_3, military_service, literacy, education, criminal_history, crime,sentence_begins, sentence_expires, prison_term_day, ransome, associates, degree_of_the_crime, degree_of_the_punishment, notes, arrest_site 4
+
+
+
+def insert_into(val):
+    try:
+        conn = psycopg2.connect(
+            dbname="lta_test",
+            user="ltauser2",
+            host="localhost",
+            password="Terve1990+"
+        )
+        c = conn.cursor()
+        print(1)
+        row = ("""INSERT INTO third_lta_main(LTAuser, volume, id, name, sex, height, build, dentition, special_peculiarities, date_of_birth, place_of_birth, place_of_residence, residence, religion, childhood_status, marital_status, number_of_children, occupation, occupation_2, occupation_3, military_service, literacy, education, criminal_history, crime,sentence_begins, sentence_expires, prison_term_day, ransome, associates, degree_of_the_crime, degree_of_the_punishment, notes, arrest_site ) VALUES(%s. %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s, %s, %s, %s);""")
+        row_values = (LTAuser, val.volume, val.id, val.name, val.sex, val.height, val.build,  val.dentition,  val.special_peculiarities, val.date_of_birth, val.place_of_birth, val.place_of_residence, val.residence, val.religion,  val.childhood_status,  val.marital_status, val.number_of_children, val.occupation, val.occupation_2, val.occupation_3, val.military_service, val.literacy,  val.education, val.criminal_history, val.crime, val.sentence_begins, val.sentence_expires, val.prison_term_day, val.ransome, val.associates, val.degree_of_the_crime, val.degree_of_the_punishment, val.notes, val.arrest_site)
+        print(row, row_values)
+        c.execute(row)
+        print('row is insterted into the databse')
+        c.close()
+        conn.commit()
+    except ( Exception, Error) as error:
+        print('This record was not inserted to the database...', error)

@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS lta_users (
+  U_id  SERIAL PRIMARY KEY,
+  username VARCHAR(30) UNIQUE NOT NULL,
+  password TEXT NOT NULL
+);

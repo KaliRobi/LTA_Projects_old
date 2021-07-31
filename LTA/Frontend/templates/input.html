@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First LTA front</title>
+    <style>
+        .body{
+            background: #80B584;
+
+        }
+         .wrapper > div { 
+        background:  #59955C 	;
+        padding: 1em;
+        
+        }
+    
+
+        .wrapper {
+            display: grid;            
+            grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+            grid-gap:1em;
+            
+            grid-auto-rows:(100PX, auto);
+            }
+       
+        .top > div {        
+            background: #1FCB4A	      }
+        .top {
+            display: grid ;
+            
+            grid-template-columns: 1fr;
+            justify-items: center;
+            
+
+        }
+        .top-ins {
+            display:  grid;
+            justify-items: center;
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font
+
+        }
+     
+
+    </style>
+
+
+
+</head>
+<body class="body">    
+<div class="top">
+<div class="top-ins">
+    <h2>LTA historical database record registration page</h2>
+</div>
+</div>
+        <div >
+            <form action="/post_data" method="post">
+                <div class="wrapper">
+                    <div>
+                        <label for="Volume"  >Volume</label>
+                        <br>
+                        <input type="text" Id = "volume" class = "attribsInput" name="volume" required >       
+                    </div>
+                    <div>
+                        <label for="id"  >Id</label>
+                        <br>
+                        <input type="text" Id = "id" class = "attribsInput" name="id" required >            
+                    </div>
+                    <div>
+                        <label for="Name"> Name </label>
+                        <br>
+                        <input type="text" Id = "name"  class = "attribsInput" name="name" required >            
+                    </div>
+                    <div>
+                        <label for="Sex">Sex</label>
+                        <br>
+                        <input type="text" Id = "sex" class = "attribsInput" name="sex" required >            
+                    </div>
+                    <div>
+                        <label for="Height">Height(cm)</label>
+                        <br>
+                        <input type="text" Id = "height" name="height" required > 
+                    </div>
+                    <div>        
+                        <label for="Build">Build</label>
+                        <br>
+                        <input type="text" Id = "build" name="build" required >
+                    </div>
+                    <div>  
+                        <label for="Dentition">Dentition</label>
+                        <br>
+                        <input type="text" Id = "Dentition" name="dentition" required >  
+                    </div>           
+                    <div>
+                        <label for="Special_Peculiarities">Special Peculiarities</label>
+                        <br>
+                        <input type="text" Id = "Special_Peculiarities"  name="special_peculiarities" required >            
+                    </div>
+                        <div>
+                        <label for="Date_of_Birth">Date of Birth</label>
+                        <br>
+                        <input type="text" Id = "Date_of_Birth" name="date_of_birth" required >            
+                    </div>
+                    <div>
+                        <label for="Place_of_Birth">Place of Birth</label>
+                        <br>
+                        <input type="text" Id = "Place_of_Birth" name="place_of_birth"  required >            
+                    </div>
+                        <div>
+                        <label for="Place_of_Residence">Place of Residence</label>
+                        <br>
+                        <input type="text" Id = "Place_of_Residence" name="place_of_residence" required >            
+                    </div>
+                    <div>
+                        <label for="Adress">Adress</label>
+                        <br>
+                        <input type="text" Id = "residence" name="residence" required >            
+                    </div>
+                    <div>
+                        <label for="Religion">Religion</label>
+                        <br>
+                        <input type="text" Id = "Religion" name="religion" required >            
+                    </div>
+                    <div>
+                        <label for="Legitimate/Illegitimate_Child">Legitimate/Illegitimate Child</label>
+                        <br>
+                        <input type="text" Id = "Childhood" name="childhood_status" required >            
+                    </div>
+                    <div>
+                        <label for="Marital_Status">Marital Status</label>
+                        <br>
+                        <input type="text" Id = "Marital_Status" name="marital_status" required >            
+                    </div>
+                    <div>
+                        <label for="Number_of_Children">Number of Children</label>
+                        <br>
+                        <input type="text" Id = "Number_of_Children" name="number_of_children" required >            
+                    </div>
+                    <div>
+                        <label for="Occupation">Occupation</label>
+                        <br>
+                        <input type="text" Id = "Occupation" name="occupation" required >            
+                    </div>
+                    <div>
+                        <label for="Occupation(2)">Occupation (2)</label>
+                        <br>
+                        <input type="text" Id = "Occupation(2)" name="occupation_2" required >            
+                    </div>
+                    <div>
+                        <label for="occupation(3)">Occupation(3)</label>
+                        <br>
+                        <input type="text" Id = "Occupation(3)" name="occupation_3" required >            
+                    </div>
+                    <div>
+                        <label for="Military_Service">Military Service</label>
+                        <br>
+                        <input type="text" Id = "Military_Service" name="military_service" required >           
+                    </div>
+                    <div>
+                        <label for="Literacy">Literacy</label>
+                        <br>
+                        <input type="text" Id = "Literacy" name="literacy" required >            
+                    </div>
+                    <div>
+                        <label for="Education">Education</label>
+                        <br>
+                        <input type="text" Id = "Education" name="education" required >            
+                    </div>
+                    <div>
+                        <label for="Criminal_History">Criminal History</label>
+                        <br>
+                        <input type="text" Id = "Criminal_History" name="criminal_history" required >            
+                    </div>
+                    <div>
+                        <label for="Crime">Crime</label>
+                        <br>
+                        <input type="text" Id = "Crime" name="crime" required >            
+                    </div>
+                    <div>
+                        <label for="Sentence_Begins">Sentence Begins</label>
+                        <br>
+                        <input type="text" Id = "Sentence_Begins" name="sentence_begins" required >            
+                    </div>
+                    <div>
+                        <label for="Sentence_Expires">Sentence Expires</label>
+                        <br>
+                        <input type="text" Id = "Sentence_Expires" name="sentence_expires" required >            
+                    </div>
+                    <div>
+                        <label for="Prison_Term(day)">Prison Term (day)</label>
+                        <br>
+                        <input type="text" Id = "Prison_Term_day" name="prison_term_day" required >            
+                    </div>
+                    <div>
+                        <label for="Ransome(Pengő,Fillér)">Ransome</label>
+                        <br>
+                        <input type="text" Id = "Ransome" name="ransome" required >    
+                    </div>
+                    <div>
+                        <label for="Associates">Associates</label>
+                        <br>
+                        <input type="text" Id = "Associates" name="associates" required >         
+                    </div>
+                    <div>
+                        <label for="Degree_of_the_Crime">Degree of the Crime</label>
+                        <br>
+                        <input type="text" Id = "degree_of_the_crime" name="degree_of_the_crime" required >            
+                    </div>
+                    <div>
+                        <label for="Degree_Punishment">Degree of the Punishment</label>
+                        <br>
+                        <input type="text" Id = "degree_of_the_Punishment" name="degree_of_the_punishment" required >            
+                    </div>
+                        <div>
+                        <label for="Notes">Notes</label>
+                        <br>
+                        <input type="text" Id = "Notes" name="notes" required >            
+                    </div>
+                    <div>
+                        <label for="Arrest_Site">Arrest Site</label>
+                        <br>
+                        <input type="text" Id = "Arrest_Site" name="arrest_site" required > 
+                    </div>
+                    <br>            
+                    
+                    
+                    <button id="submitData">Upload</button> 
+            </div>   
+            </form>    
+               
+
+    </div>
+
+
+    <div class="verify">
+        <tbody>
+            <div id="rowList"></div>
+        </tbody>
+    </div>
+    
+
+</body>
+</html>
