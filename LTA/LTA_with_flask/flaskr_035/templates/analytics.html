@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>First LTA front</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></style>
+
+ 
+
+    </head>
+    <style>
+        /* .myChart{
+            background-color: rgb(49, 0, 196);
+            margin: 20px;
+        } */
+        .card2{
+            border: none;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: 60% 40%;
+        }
+        .bigchar{
+            align-items: flex-start;
+        }
+        canvas {
+            padding: 20 px;
+        }
+  
+    </style>
+
+    <body>
+
+      
+
+<div class="main_body">
+
+    <div class="menu_bar">
+
+        <div class="top-items">
+
+            
+                <div class="top-item p-header">
+                    <h3>LTA Historical Database Landing page</h3> 
+                </div>
+                <div class="top-item p-counter">                            
+                    {% for row_counter in get_flashed_messages() %}
+                    <div class="flash">{{row_counter}}</div>
+                    {% endfor %}
+                    
+                </div>
+        </div>
+
+        <div class="menu_items">
+            
+            <div ><a class="menu_item" href="{{url_for('main.index')}}" style="text-decoration: none;color:rgb(0, 0, 0);" >Whats this all about</a></div>
+
+            <div><a class="menu_item" href="{{url_for('main.map')}}" style="text-decoration: none;color:rgb(0, 0, 0);">Map</a></div>
+
+            <div ><a class="menu_item" href="{{url_for('main.analytics')}}" style="text-decoration: none;color:rgb(0, 0, 0);" >Analytics</a></div>
+
+            <div ><a class="menu_item" href="{{url_for('main.users')}}" style="text-decoration: none;color:rgb(0, 0, 0);" >For users</a></div>
+        </div>
+
+    <div class="toasts" id="toasts">
+    </div>
+    <div>
+        <form method="post">
+            <label for="chose a town">Choose a town:</label>
+            <select name="Towns" id="townList"></select>    
+        </form>
+    </div>   
+        <div class="grid">
+            <div class="bigchar">
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="myChart" width="100" height="40"></canvas>                
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="myChart2" width="100" height="40"></canvas>                
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="myChart3" width="100" height="40"></canvas>                
+                    </div>
+                </div>
+            </div>
+                <div class="card2">
+                    <div class="card-body">
+                        <canvas id="debPie" width="100" height="40" ></canvas>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="debPie2" width="100" height="40" ></canvas>
+                    </div>
+            </div> 
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script>
+            
+            function generateDropDown() {  // creates a drop down menu from the town list provided by flask app
+            fetch('http://127.0.0.1:5000/api/datatransfer/towns')
+            .then(res => res.json())
+            .then(res => {
+            
+            allTowns = res['towns']
+            const createDropDown = document.getElementById('townList')
+
+            for (let x =0; x < allTowns.length; x++){
+                
+                const town = document.createElement('option')
+                town.setAttribute('value',`${allTowns[x]}`)
+                town.innerHTML = `<p>${allTowns[x]}<p\>`
+                createDropDown.appendChild(town)
+//lta_data=# select * from (select distinct place_of_residence, count(place_of_residence) over(partition by place_of_residence ) as nr from lta_main) as XxX where nr > 10 order by nr desc;
+                
+            }})
+          }
+          function probaParam() {   //send back the value to the flask
+            const theSelectedTown = getDropValue()       
+            fetch(`${window.location.origin}/api/datatransfer/t/${theSelectedTown}`,{
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+             })
+             .then(res =>  {res})  // a retrun hianyzott illetve az h nem volt megcsinalva az vegpont a masik oldalon
+            // .then(data => console.log(data))
+            Object.keys(res[`${theSelectedTown}`]).forEach(val  => rels.push(val) )
+            Object.values(res[`${theSelectedTown}`]).forEach(val  => relnum.push(val) )
+        }        
+        function getDropValue() {   // finds the value of the chosen town
+                    
+                    const theTown = document.getElementById('townList')
+                    if( theTown.selectedIndex !== -1) {
+                        const theValue = theTown.options[theTown.selectedIndex]
+                        console.log(theValue.value)
+                        return theValue.value }            
+                        
+                    }
+                    
+        function chosenTown(z) {   //send back the value to the flask
+            const theSelectedTown = getDropValue()
+            console.log(theSelectedTown)
+            const townJson = {"town": `${theSelectedTown}`}  
+            console.log(townJson)           
+            fetch('http://127.0.0.1:5000/api/datatransfer',{
+                method: 'GET',
+                
+                headers: {
+                    'Content-Type': 'application/json'
+                }   })
+             .then(res =>  {res})  // a retrun hianyzott illetve az h nem volt megcsinalva az vegpont a masik oldalon
+            // .then(data => console.log(data))
+            
+        }
+        
+    z  = getDropValue()    
+    document.getElementById('townList').addEventListener('click', fetchit)
+    generateDropDown()
+    z  = getDropValue()
+    //getDropValue()
+
+    function probaParam() {   //send back the value to the flask
+            const theSelectedTown = getDropValue()       
+            fetch(`${window.location.origin}/api/datatransfer/${theSelectedTown}`,{
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+             })
+             .then(res =>  {res})  // a retrun hianyzott illetve az h nem volt megcsinalva az vegpont a masik oldalon
+            // .then(data => console.log(data))
+          
+        }
+    let chartExists 
+    function fetchit() {   // this handles all the appi calls. Not sure if better if each chart has its own call or not    
+            const theSelectedTown = getDropValue()         
+            //  fetch('http://127.0.0.1:5000/api/datatransfer')
+            fetch(`${window.location.origin}/api/datatransfer/${theSelectedTown}`,{
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(res => res.json())
+                .then(res => {
+                crimeS = [], crimeA = [], crimeN = [], 
+                eduS = [], eduE = [], eduN = [], 
+                occuN = [], occuO = [], occuA = []
+                relN = [], relK = []
+                sentN = [], sentK = []
+                 // talan szebb lenne ha a fetch kulon allo funkcio lenne es ay adatot returnolja
+                    ///eyt feltudja használni a chartMain. Ez a fetch hiba kezelése miatt is fontos             
+                
+                for(let i = 0; i< res["ret_crime"].length; i++){
+                        crimeS.push(res["ret_crime"][i]['s'])
+                        crimeA.push(res["ret_crime"][i]['a'])
+                        crimeN.push(res["ret_crime"][i]['n'])            
+                    }
+                for(let i = 0; i< res["ret_edu"].length; i++){
+                        eduS.push(res["ret_edu"][i]['s'])
+                        eduE.push(res["ret_edu"][i]['e'])
+                        eduN.push(res["ret_edu"][i]['n'])            
+                    }
+                for(let i = 0; i< res["ret_occu"].length; i++){
+                    occuA.push(res["ret_occu"][i]['a'])
+                    occuO.push(res["ret_occu"][i]['o'])
+                    occuN.push(res["ret_occu"][i]['n'])            
+                }
+                
+                    Object.values(res["ret_rel"]).forEach(val  => relN.push(val) )
+                    Object.keys(res["ret_rel"]).forEach(val  => relK.push(val) )
+                    Object.values(res["ret_sent"]).forEach(val => sentN.push(val))
+                    Object.keys(res["ret_sent"]).forEach(val => sentK.push(val))
+                              
+               
+                    
+
+                console.log(relK)
+                console.log(relN)
+
+
+                function chartMain() {   // this processes the data creates charts and updates them
+                    function updateChart(chart, axisX, axisY) {   // updates the given chart
+                                        chart.data.labels = axisX
+                                        chart.data.datasets[0].data = axisY
+                                        chart.update()
+                                     }    
+
+                  var ctx = document.getElementById('myChart3').getContext('2d');
+                                     
+                  if (chartExists == undefined) {
+                  console.log('chart created')
+                      chartOne = new Chart(ctx, {                        
+                        
+                        type: 'polarArea',
+                        data: {
+                        labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue'],
+                        datasets: [
+                            {
+                            label: eduE,
+                            data: eduN,
+                            backgroundColor: [
+                                        'rgba(0, 255, 0, 0.8)',
+                                      'rgba(128, 128, 0, 0.8)',
+                                      'rgba(128, 99, 132, 0.8)',
+                                      'rgba(0, 255, 0, 0.8)',
+                                      'rgba(0, 128, 0, 0.8)',
+                                      'rgba(0, 0, 128, 0.8)',
+                                      'rgba(192, 192, 192, 0.8)',
+                                      'rgba(255, 0, 0, 0.8)',
+                            ]
+                            }
+                        ]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Education'
+                            }
+                            }
+                        }
+                        }) }
+
+                        else {
+                            updateChart(chartOne,eduE, eduN )
+                            console.log('chart ctx updated')
+                                       }
+                   var ctx = document.getElementById('myChart2').getContext('2d');
+                      
+                  if (chartExists == undefined) {
+                  console.log('chart created')
+                      chartTwo = new Chart(ctx, {                        
+                        type: 'line',
+                        data: {
+                        labels: sentK,
+                        datasets: [
+                            {
+                            label: 'Dataset',
+                            data: sentN,
+                            fill: false,
+                            stepped: true,
+                            }
+                        ]
+                        },
+                        labels: eduS,
+                        options: {
+                            responsive: true,
+                            interaction: {
+                            intersect: false,
+                            axis: 'x'
+                            },
+                            plugins: {
+                            title: {
+                                display: true,
+                                text: 'imprisonments',
+                            }
+                            }
+                        }
+                         }
+                        ) 
+                                      }                         
+                        else {
+                            updateChart(chartTwo,sentK, sentN )
+                            console.log('chart ctx updated')
+                                       }
+                var ctx4 = document.getElementById('myChart').getContext('2d');
+                
+                if (chartExists == undefined) {
+                console.log('chart created')
+                    chartThree = new Chart(ctx4, {                        
+                    type: 'line',
+                    data: {
+                    labels: relK,
+                    datasets: [
+                        {
+                        label: 'Dataset',
+                        data: relN,
+                        fill: false,
+                        stepped: true,
+                        }
+                    ]
+                    },
+                    labels: relK,
+                    options: {
+                        responsive: true,
+                        interaction: {
+                        intersect: false,
+                        axis: 'x'
+                        },
+                        plugins: {
+                        title: {
+                            display: true,
+                            text: ' Interpolation',
+                        }
+                        }
+                    }
+                    }
+                    ) 
+                                    }                         
+                    else {
+                        updateChart(chartThree,relK, relN )
+                        console.log('chart ctx updated')
+                                    }                    
+                  var ctx2 = document.getElementById('debPie').getContext('2d');
+                  if (chartExists == undefined) {
+                  console.log('chart ctx2 created')
+                  chartFour = new Chart(ctx2, {
+                          type: 'pie',
+                          data: {
+                              labels: eduS,
+                              datasets: [{
+                                  label: 'distribution among religions',
+                                  data: eduN,
+
+                                  backgroundColor: [
+                                      'rgba(0, 255, 0, 0.8)',
+                                      'rgba(128, 128, 0, 0.8)',
+                                      'rgba(128, 99, 132, 0.8)',
+                                      'rgba(0, 255, 0, 0.8)',
+                                      'rgba(0, 128, 0, 0.8)',
+                                      'rgba(0, 0, 128, 0.8)',
+                                      'rgba(192, 192, 192, 0.8)',
+                                      'rgba(255, 0, 0, 0.8)',
+                                  ],
+                                  borderColor: [
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                  ],
+                                  color:[
+                                  'rgba(0, 10, 0, 0.8)'
+                                  ],
+                                  borderWidth: 1
+                              }]
+                          },
+                          options : {
+                            plugins: {
+                                    legend: {
+                                        labels: {
+                                            // This more specific font property overrides the global property
+                                            font: {
+                                                size: 14,                                                
+                                            },
+                                            fontColor: '#FFCCE5'
+                                        },
+                                        fontColor: '#FFCCE5'
+                                    }},
+                                    aspectRatio:2,
+                                    gridLines:false,
+                                    scales:{
+                                        y:{
+                                            beginAtZero:false,
+                                            //grid:{display:false},
+                                            display:false
+                                        },
+                                        x: {
+                                            beginAtZero:true,
+                                            //grid:{display:false},
+                                            display:false
+                                    }
+                                }
+                            }
+                      }) 
+                  }
+                        else {
+                            updateChart(chartFour, eduS, eduN)
+                            console.log('chart ctx2 updated')
+                            plugins: {legend: {  labels: {font: { size: 14 }    } }          }
+                                       }
+           
+
+                  var ctx3 = document.getElementById('debPie2').getContext('2d');
+                  if (chartExists == undefined) {
+                  console.log('chart ctx3 created')
+                  chartFive = new Chart(ctx3, {
+                          type: 'pie',
+                          data: {
+                              labels: relK,
+
+                              datasets: [{
+                                  label: 'distribution amoung religions',
+                                  data: relN,
+
+                                  backgroundColor: [
+                                  'rgba(0, 255, 0, 0.8)',
+                                      'rgba(128, 128, 0, 0.8)',
+                                      'rgba(128, 99, 132, 0.8)',
+                                      'rgba(0, 255, 0, 0.8)',
+                                      'rgba(0, 128, 0, 0.8)',
+                                      'rgba(0, 0, 128, 0.8)',
+                                      'rgba(192, 192, 192, 0.8)',
+                                      'rgba(255, 0, 0, 0.8)',
+
+
+                                  ],
+                                  borderColor: [
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+
+                                  ],
+                                  borderWidth: 1
+                              }]
+                          },
+                          options : {                                
+                                    aspectRatio:2,
+                                    gridLines:false,
+                                    scales:{
+                                        y:{
+                                            beginAtZero:false,
+                                            //grid:{display:false},
+                                            display:false
+                                        },
+                                        x: {
+                                            beginAtZero:true,
+                                            //grid:{display:false},
+                                            display:false
+                                    }
+                                }
+                            }
+
+
+
+                      }) 
+                           }  
+                       else {
+                            updateChart(chartFive, relK, relN)
+                            console.log('chart ctx3 updated')
+                           
+                                       }}  // enf of the chatMain 
+                                       chartMain()
+                                       chartExists = true
+                           
+             //https://www.youtube.com/watch?v=q9lBv64yfLs&ab_channel=ExcellenceinExcel 
+    })} // ez a harom a vege a fetchit funkcionak
+   
+    fetchit()
+    //-setInterval(chosenTown, 9999)
+    //setInterval(fetchit, 10000)
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

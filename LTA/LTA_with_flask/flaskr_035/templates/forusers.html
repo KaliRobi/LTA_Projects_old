@@ -1,0 +1,74 @@
+<html> 
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>First LTA front</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></style>
+
+ 
+
+    </head>
+
+    <body class="body">
+
+      
+
+        <div class="main_body">
+
+            <div class="menu_bar">
+
+                <div class="top-items">
+
+                    
+                        <div class="top-item p-header">
+                            <h3>LTA Historical Database Landing page</h3> 
+                        </div>
+                        <div class="top-item p-counter">                            
+                            {% for row_counter in get_flashed_messages() %}
+                            <div class="flash">{{row_counter}}</div>
+                            {% endfor %}
+                            
+                        </div>
+                </div>
+
+                    <div class="menu_items">
+
+                        <div ><a class="menu_item" href="{{url_for('main.index')}}" style="text-decoration: none;color:rgb(0, 0, 0);" >Whats this all about</a></div>
+
+                        <div ><a class="menu_item" href="{{url_for('main.map')}}" style="text-decoration: none;color:rgb(0, 0, 0);" >Map</a></div>
+
+                        <div ><a class="menu_item" href="{{url_for('main.analytics')}}" style="text-decoration: none;color:rgb(0, 0, 0)f;" >Analytics</a></div>
+
+                        <div ><a class="menu_item" href="{{url_for('main.users')}}" style="text-decoration: none;color:rgb(0, 0, 0);" >For users</a></div>
+                    </div>
+            </div>
+
+            <div class="contect">
+                        <div class="toasts" id="toasts"></div>
+                        <div class="logon-main logon-box">
+                            <form action="{{url_for('users.login_to_app')}}" method='POST' >
+                            <div class="logon-box-item"> 
+                            <label for="username">Username:</label>
+                            <input name="username" id="username" type='text'>
+                            <label for="password">Password:</label>
+                            <input name="password" type="password" id="password">
+                            <input type="submit" value="Log In">
+                            </form>
+                        
+                                                        
+                        </div> 
+                    
+                         
+                    
+                </div>
+        </div>
+    
+
+
+
+</body>
+

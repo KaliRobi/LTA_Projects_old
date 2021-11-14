@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First LTA front
+    </title>
+    <style>
+      .body{
+        background: #eeffef;
+      }
+      .wrapper-social {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+        grid-gap:1em;
+        grid-auto-rows:(100PX, auto);
+      }
+      .wrapper-crime {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+        grid-gap:1em;
+        grid-auto-rows:(100PX, auto);
+      }
+      .wrapper-social > div {
+        background: #a3f0a7;
+        padding: 1em;
+      }
+      .wrapper-crime > div {
+        background: #eeffef	;
+        padding: 1em;
+      }
+      
+      .top {
+        display: grid ;
+        grid-template-columns: 5fr 1fr;
+        justify-items: center;
+        background: #72f994
+      }
+      .top-ins {
+        display:  grid;
+        justify-items: center;
+        width: 100%;
+        font-family:  sans-serif;
+        
+      }
+      .top-right{
+        display:  grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        justify-items: stretch;
+        width: 100%;
+        font-family:  sans-serif;
+        
+      }
+      .top-right-itms{
+          display: grid;
+          justify-items: stretch;
+          font-family:  sans-serif;
+      }
+      .top-right-itms-logoff{
+          display: grid;
+          justify-items: end;
+          font-family:  sans-serif;
+          width: 100%;
+      }
+
+      .top-right-itms-myrecord{
+          display: grid;
+          justify-items: end;
+          font-family:  sans-serif;
+          width: 100%;
+          height: 100%;
+
+      }
+      table{
+        width: 100%;
+        text-align: left;
+      }
+      table, th, td {
+        border: 1px solid;
+        border-collapse: collapse;
+        
+      }
+      button{
+        background: #67d883;
+        font-family: sans-serif;
+        border: None;
+        
+      }
+     
+    </style>
+  </head>
+  <body class="body">    
+    <div class="top">
+      <div class="top-main">
+        <h2>LTA User dashboard - my records
+        </h2>
+      </div>
+      <div class="top-right">
+        <div class=top-right-itms>
+            <form>
+               <output>
+                   logged in as:
+                   <br>
+                   <span>{{ session["current_user"]}}</span>
+               </output>
+            </form>
+        </div>
+        <div class=top-right-itms-logoff>
+            <form class=top-right-itms-logoff method="GET">
+                <button><a href="{{url_for('users.logoff')}}"style="text-decoration: none;color:rgb(0, 0, 0);">Log off</a></button>
+            </form>
+        </div>
+        <div class=top-right-itms-counter>
+            <div class=top-right-itms-myrecords-r>
+                recorded by me:
+                <br>
+                {{own_records}}
+            </div>
+            
+        </div>
+        <div class=top-right-itms-myrecord>
+            <form class=top-right-itms-myrecord method="GET">
+                <button><a href="{{url_for('dashboard.main_input')}}" style="text-decoration: none;color:rgb(0, 0, 0);" >Get to registration</a></button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <div >
+    <div >
+      <table id="vertical-1">
+        <caption>last records</caption>
+        <tr>
+            <th>{{headers[0]}}</th>
+            {% for id in id%}
+            <td>inp{{id}}</td>
+            {%endfor%}
+        </tr>
+        <tr>
+            <th>{{headers[1]}}</th>
+            {% for e in volume%}
+            <td>{{e}}</td>
+            {%endfor%}
+        </tr>
+        <tr>
+            <th>{{headers[2]}}</th>
+            {% for e in names%}
+            <td>{{e}}</td>
+            {%endfor%}        
+          </tr>
+          <tr>
+            <th>{{headers[3]}}</th>
+            {% for e in sex%}
+            <td>{{e}}</td>
+            {%endfor%}        
+          </tr>
+        <tr>
+          <th>{{headers[4]}}</th>
+          {% for e in height%}
+          <td>{{e}}</td>
+          {%endfor%}      
+        </tr>
+      <tr>
+          
+          <th>{{headers[5]}}</th>
+          {% for e in build%}
+          <td>{{e}}</td>
+          {%endfor%}   
+            </tr>
+        <tr>
+        
+        <th>{{headers[6]}}</th>
+        {% for e in dentition %}
+        <td>{{e}}</td>
+        {%endfor%} 
+          </tr>
+      <tr>
+          
+          <th>{{headers[7]}}</th>
+          {% for e in peculiarities%}
+          <td>{{e}}</td>
+          {%endfor%} 
+              </tr>
+      <tr>
+          
+          <th>{{headers[8]}}</th>
+          {% for e in  birthdate%}
+          <td>{{e}}</td>
+          {%endfor%} 
+         </tr>
+      <tr>
+        
+        <th>{{headers[9]}}</th>
+        {% for e in birthplace%}
+        <td>{{e}}</td>
+        {%endfor%} 
+          </tr>
+      <tr>
+          
+          <th>{{headers[10]}}</th>
+          {% for e in place_of_residence%}
+          <td>{{e}}</td>
+          {%endfor%} 
+        
+        </tr>
+      <tr>
+          
+          <th>{{headers[11]}}</th>
+          {% for e in residence %}
+          <td>{{e}}</td>
+          {%endfor%} 
+                <tr>
+
+          <th>{{headers[12]}}</th>
+          {% for e in religion%}
+          <td>{{e}}</td>
+          {%endfor%} 
+        
+        </tr>
+      <tr>
+        <th>{{headers[13]}}</th>
+        {% for e in childhood %}
+        <td>{{e}}</td>
+        {%endfor%}       </tr>
+      <tr>
+        <th>{{headers[14]}}</th>
+        {% for e in marital_status%}
+        <td>{{e}}</td>
+        {%endfor%} 
+            </tr>
+      <tr>
+        <th>{{headers[15]}}</th>
+        {% for e in children%}
+        <td>{{e}}</td>
+        {%endfor%} 
+            </tr>
+      <tr>
+        <th>{{headers[16]}}</th>
+        {% for e in occupation %}
+        <td>{{e}}</td>
+        {%endfor%}     
+        </tr>
+         <tr>
+        <th>{{headers[17]}}</th>
+        {% for e in occupation_2 %}
+        <td>{{e}}</td>
+        {%endfor%}     
+        </tr>
+      <tr>
+        <th>{{headers[18]}}</th>
+        {% for e in occupation_3 %}
+        <td>{{e}}</td>
+        {%endfor%} 
+            </tr>
+      <tr>
+        <th>{{headers[19]}}</th>
+        {% for e in military_service %}
+        <td>{{e}}</td>
+        {%endfor%} 
+            </tr>
+      <tr>
+        <th>{{headers[20]}}</th>
+        {% for e in literacy %}
+        <td>{{e}}</td>
+        {%endfor%} 
+       </tr>
+           <tr>
+          <th>{{headers[21]}}</th>
+          {% for e in eduction%}
+          <td>{{e}}</td>
+          {%endfor%} 
+        </tr>
+           <tr>
+          <th>{{headers[22]}}</th>
+          {% for e in criminal_history %}
+          <td>{{e}}</td>
+          {%endfor%} </tr>
+           <tr>
+         <th>{{headers[23]}}</th>
+          {% for e in crime %}
+          <td>{{e}}</td>
+               {%endfor%} 
+               </tr>
+         <th>{{headers[24]}}</th>
+          {% for e in sentence_begins %}
+          <td>{{e}}</td>
+               {%endfor%}  <tr>
+         <th>{{headers[25]}}</th>
+          {% for e in sentence_expires%}
+          <td>{{e}}</td>
+          {%endfor%}  </tr>
+           <tr>
+        <th>{{headers[26]}}</th>
+          {% for e in prison_term_day %}
+          <td>{{e}}</td>
+          {%endfor%}   </tr>
+           <tr>
+       <th>{{headers[27]}}</th>
+          {% for e in ransome%}
+          <td>{{e}}</td>
+          {%endfor%}     </tr>
+             <tr>
+      <th>{{headers[28]}}</th>
+          {% for e in associates%}
+          <td>{{e}}</td>
+          {%endfor%}       </tr>
+        <tr>
+          <th>{{headers[29]}}</th>
+          {% for e in degree_of_crime %}
+          <td>{{e}}</td>
+          {%endfor%} </tr>
+        <tr>
+          <th>{{headers[30]}}</th>
+          {% for e in degree_of_punishment %}
+          <td>{{e}}</td>
+          {%endfor%}  </tr>
+        <tr>
+          <th>{{headers[31]}}</th>
+          {% for e in notes %}
+          <td>{{e}}</td>
+          {%endfor%} </tr>
+        <tr>
+          <th>{{headers[32]}}</th>
+          {% for e in arrest_site%}
+          <td>{{e}}</td>
+          {%endfor%}  </tr>
+        <tr>
+          <th></th>
+             {% for e in edits%}
+          <td><a href="{{url_for('dashboard.edit_record')}}">{{e}}</a></td>
+            {%endfor%}
+        </tr>
+    </table>
+    </div>
+
+  </body>
+</html>

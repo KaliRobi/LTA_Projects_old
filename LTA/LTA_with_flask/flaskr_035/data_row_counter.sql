@@ -1,0 +1,1 @@
+Select count(username) from lta_main;

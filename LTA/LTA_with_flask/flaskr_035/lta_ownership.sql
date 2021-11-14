@@ -1,0 +1,8 @@
+CREATE TABLE record_owners(
+    SERIAL SERIAL NOT NULL,
+    TIME DATE NOT NULL,
+    OPERATION VARCHAR(6),
+    record_id VARCHAR(15) PRIMARY KEY NOT NULL,
+    username VARCHAR(30) Not Null
+)
+
